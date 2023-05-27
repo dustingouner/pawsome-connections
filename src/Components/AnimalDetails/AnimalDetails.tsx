@@ -24,3 +24,5 @@ const AnimalDetails = () => {
     </div>
   )
 }
+
+export default AnimalDetails
