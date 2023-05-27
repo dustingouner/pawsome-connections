@@ -13,7 +13,7 @@ const Form = () => {
         <option>Other</option>
       </select>
       <label htmlFor="location">Find Pets by Zip Code:</label>
-      <input name="location" type="number" onChange={event => setLocation(parseInt(event.target.value))} placeholder="Imput Zip Code"></input>
+      <input name="location" type="number" onChange={event => setLocation(parseInt(event.target.value))} placeholder="Input Zip Code"></input>
     </form>
   )
 
