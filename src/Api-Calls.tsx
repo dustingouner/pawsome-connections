@@ -1,3 +1,10 @@
+
+// curl -d "grant_type=client_credentials&client_id=o34CwH6jqwAgLCbYcec4t0ZRRxWSrL0GyEBnN3wRULUtaM1b4B&client_secret=Sn6nsQvDYN6gEwsAuXQmS9cLFxFcLf9LVkv8ndsE" https://api.petfinder.com/v2/oauth2/token
+
+
+
+
+
 import React from "react";
 
 const getAnimals = () => {
@@ -7,7 +14,7 @@ const getAnimals = () => {
          method: "GET",
          headers: {
            Authorization:
-             "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjIyYzZjNjE5ZjJkMTI2MjQ2NDdlMDY2NjQ1ZTE1NGU0ZDg0N2M2YTU4NzdhNzM2NjY0NmQwYzlhYjUxYjQzNTMxNTkwYjAyODQ4M2E3MDdhIiwiaWF0IjoxNjg1MjE1OTYwLCJuYmYiOjE2ODUyMTU5NjAsImV4cCI6MTY4NTIxOTU2MCwic3ViIjoiIiwic2NvcGVzIjpbXX0.OdFVYiE6wVZ9dl0QUQdnVykSwB3Q1Tflo1ENuaxyamHmHaKCuQExesPuyZQSzYvJZxyzK6-8-8Z6yZz1-87SysnBQZMJogKoJxLybjydHjlWXQxmYu13MQRUEwmTc_Nhg9cNlXZpQHWv4Nuhp_a-3zoQ68qJSHZ7AR8PMqrlhunkBAYQgiJMtCgn_P4jtn6lfPw4iva_4KNowDGAOC0nFZJ_hvOtoEXm8gTTPANOhrDNwssG3kQSj-cFfQDS4vgA4pWpNb04rHANMLmYq58THJLJ9fz9RWcrV8fIDz-GqYhRvjlbtJc1q73Iibz63PPfbQkSU7hDqZnYuesZDrUEYA",
+             "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjdhNjdjYTg5YjA5MmUyODcxOGJhZGFkOTllNTc2MzBmOTEwNmYzNWVjMzBkNTkwOTUxNmI3NGY1OGI5MmViYzdiN2ViYzBjZGI2NjQ2MjYwIiwiaWF0IjoxNjg1MjI2ODgyLCJuYmYiOjE2ODUyMjY4ODIsImV4cCI6MTY4NTIzMDQ4Miwic3ViIjoiIiwic2NvcGVzIjpbXX0.tMtwb6O94JMuDWow1nblJ8Pjon2yOUcZIISYjH7osVxPbTfPEtb39m_vR3h5MaZEmmFXO5fMSrriTLwCGMz5CVkvtMZQo11Sxq8lQpdLD6Z2VgsKW2pbIEHqem5vBU9EFPYKPzZJTQDM32mKyzM9BEbMiaZDirlG99t3a_Xo1ZX6MwbtqiOUe82DGQh6EPGi1SfQZyRXdJeZ31rnuNjYDeWEJTJ9s1aCUmG_dNN5_txijA49ZhGtIPRcQiv6oy5zdIoh3tI9WQVmqrYT6_uMqG_cPI9-3eIXBxuGQBBjRJSNvDbHbYVzU81mUPc53YQY9YAqqWx0299NJxTqTZNqbA",
          },
        }
      ).then((response) => response.json());
