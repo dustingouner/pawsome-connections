@@ -1,6 +1,7 @@
 import React from "react";
 import './Animals.css'
 import AnimalCard from '../AnimalCard/AnimalCard'
+import { Link } from 'react-router-dom'
 
 type Animal = {
   id: number;
@@ -9,11 +10,27 @@ type Animal = {
     large: string,
     medium: string,
     small: string
- },
-  url: string;
+ } | null;
+ url: string,
   age: string,
-  breeds: object,
-  contact:object,
+  breeds: {
+    mixed: boolean,
+    primary: string,
+    secondary: string,
+    unknown: boolean
+  },
+  contact: {
+    address: {
+      address1: string,
+      address2: string,
+      city: string,
+      country: string,
+      postcode: string,
+      state: string
+    }
+    email: string,
+    phone: string
+  }
   description: string,
   gender: string,
   name: string,
@@ -38,9 +55,12 @@ const Animals:React.FC<AnimalProps> = (props:AnimalProps) => {
   return (
     <div>
       {animals.map(animal => (
+
+        <Link to={`/${animal.id}`} style={{ textDecoration: 'none' }} > 
         <AnimalCard 
         key={animal.id}
         animalDetails={animal} />
+        </Link>
       ))}
     </div>
   )

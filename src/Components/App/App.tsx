@@ -9,26 +9,41 @@ import {useState, useEffect} from 'react'
 import { Route, Switch } from 'react-router-dom';
  
 
-
- type Animal = {
-  id: number,
+type Animal = {
+  id: number;
   primary_photo_cropped: {
     full: string,
     large: string,
     medium: string,
     small: string
- },
-  url:string,
-  age:string,
-  breeds: object,
-  contact:object,
-  description:string,
-  gender:string,
-  name:string,
+ } | null;
+ url: string,
+  age: string,
+  breeds: {
+    mixed: boolean,
+    primary: string,
+    secondary: string,
+    unknown: boolean
+  },
+  contact: {
+    address: {
+      address1: string,
+      address2: string,
+      city: string,
+      country: string,
+      postcode: string,
+      state: string
+    }
+    email: string,
+    phone: string
+  }
+  description: string,
+  gender: string,
+  name: string,
   size: string,
   species: string,
   type: string,
- }
+};
  
 // async function App() {
 //   const [animals, setAnimals] = useState<Animal[]>([]);
@@ -76,7 +91,7 @@ import { Route, Switch } from 'react-router-dom';
       <Switch>
         <Route exact path="/:id" >
           <Header />
-          <AnimalDetails />
+          <AnimalDetails animals={animals}/>
         </Route>
         <Route exact path="/"> 
         {/* {animals.length > 0 ? ( */}
