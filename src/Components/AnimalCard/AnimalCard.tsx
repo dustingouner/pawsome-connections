@@ -48,12 +48,12 @@ const AnimalCard:React.FC<AnimalProps> = (props:AnimalProps) => {
   const imgSrc = animalDetails.primary_photo_cropped?.small
 
   return (
-    <section className='animal-card'>
-      <img src={imgSrc || fallBackImage} alt="Photos are in the works!"/>
-      <h2>{animalDetails.name}</h2>
+    <section className="animal-card">
+        <img className="animal-img" src={imgSrc || fallBackImage} alt="Photos are in the works!" />
+        <h2 className="animal-name">{animalDetails.name}</h2>
         <p>{`${animalDetails.age} | ${animalDetails.breeds.primary} | ${animalDetails.contact.address.city}, ${animalDetails.contact.address.state}`}</p>
     </section>
-  )
+  );
 }
 
 export default AnimalCard;
