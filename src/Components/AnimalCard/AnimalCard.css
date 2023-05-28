@@ -1,0 +1,18 @@
+.animal-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  margin: 5px;
+  padding: 5%;
+  color:black;
+  text-align:center;
+}
+
+
+.animal-img{
+    height: 40vh;
+    width: 100%;
+}
