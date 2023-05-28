@@ -49,19 +49,19 @@ import { Route, Switch } from 'react-router-dom';
   
     console.log(animals, "animals");
 
-  // useEffect(() => {
-  //   getAnimals()
-  //     .then((data) => {
-  //       setAnimals(data.animals)
-  //       console.log(data, "data")
-  //       console.log(data.animals, "DA")
-  //     })
-  //     .catch((error) => {
-  //       setError(error)
-  //       console.log(error)
-  //     })
-  //   },[])
-  //   console.log(animals, "animals")
+  useEffect(() => {
+    getAnimals()
+      .then((data) => {
+        setAnimals(data.animals)
+        console.log(data, "data")
+        console.log(data.animals, "DA")
+      })
+      .catch((error) => {
+        setError(error)
+        console.log(error)
+      })
+    },[])
+    console.log(animals, "animals")
   
   return (
     <div className="App">

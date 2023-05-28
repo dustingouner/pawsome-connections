@@ -1,4 +1,7 @@
 import React from "react";
+import './Animals.css'
+import '../AnimalCard/AnimalCard'
+
 type Animal = {
   id: number;
   url: string;

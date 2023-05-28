@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from "react";
+import './Form.css'
 
 const Form = () => {
   const [animalType, setAnimalType] = useState('')
   const [location, setLocation] = useState(0)
   
   return (
-    <form>
+    <form className='form-section'>
       <select>
         <option>Dog</option>
         <option>Cat</option>
