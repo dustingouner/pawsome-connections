@@ -1,0 +1,11 @@
+.header-section {
+  display: flex;
+  justify-content: center;
+  height: 15em;
+  background-color:rgb(140, 56, 57)
+}
+
+img {
+  height: 15em;
+  width: 30em;
+}

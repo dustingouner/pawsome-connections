@@ -8,19 +8,42 @@ import getAnimals from '../../Api-Calls';
 import {useState, useEffect} from 'react'
 import { Route, Switch } from 'react-router-dom';
  
- type Animal = {
-  id: number,
-  url:string,
-  age:string,
-  breeds: object,
-  contact:object,
-  description:string,
-  gender:string,
-  name:string,
+
+type Animal = {
+  id: number;
+  primary_photo_cropped: {
+    full: string,
+    large: string,
+    medium: string,
+    small: string
+ } | null;
+ url: string,
+  age: string,
+  breeds: {
+    mixed: boolean,
+    primary: string,
+    secondary: string,
+    unknown: boolean
+  },
+  contact: {
+    address: {
+      address1: string,
+      address2: string,
+      city: string,
+      country: string,
+      postcode: string,
+      state: string
+    }
+    email: string,
+    phone: string
+  }
+  description: string,
+  gender: string,
+  name: string,
   size: string,
   species: string,
   type: string,
- }
+};
  
 // async function App() {
 //   const [animals, setAnimals] = useState<Animal[]>([]);
@@ -68,17 +91,17 @@ import { Route, Switch } from 'react-router-dom';
       <Switch>
         <Route exact path="/:id" >
           <Header />
-          <AnimalDetails />
+          <AnimalDetails animals={animals}/>
         </Route>
         <Route exact path="/"> 
-        {animals.length > 0 ? (
-          // second way to resolve loading is by adding the above conditional. page would only render once data has loaded. Moved Header component inside of route, otherwise it would load first while waiting on the data. 
+        {/* {animals.length > 0 ? ( */}
+          {/* // second way to resolve loading is by adding the above conditional. page would only render once data has loaded. Moved Header component inside of route, otherwise it would load first while waiting on the data.  */}
           <>
           <Header />
           <Form />
           <Animals animals={animals} />
           </>
-        ) : null}
+        {/* ) : null} */}
         </Route>
       </Switch>
     </div>

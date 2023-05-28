@@ -1,10 +1,36 @@
 import React from "react";
+import './Animals.css'
+import AnimalCard from '../AnimalCard/AnimalCard'
+import { Link } from 'react-router-dom'
+
 type Animal = {
   id: number;
-  url: string;
+  primary_photo_cropped: {
+    full: string,
+    large: string,
+    medium: string,
+    small: string
+ } | null;
+ url: string,
   age: string,
-  breeds: object,
-  contact:object,
+  breeds: {
+    mixed: boolean,
+    primary: string,
+    secondary: string,
+    unknown: boolean
+  },
+  contact: {
+    address: {
+      address1: string,
+      address2: string,
+      city: string,
+      country: string,
+      postcode: string,
+      state: string
+    }
+    email: string,
+    phone: string
+  }
   description: string,
   gender: string,
   name: string,
@@ -20,16 +46,23 @@ interface AnimalProps {
 const Animals:React.FC<AnimalProps> = (props:AnimalProps) => {
   const { animals } = props
 
-  // if (animals.length === 0) {
-  //   return <p>Please hang tight while we find your perfect pet...</p>; // Display a loading state, one way to resolve the delay with the data loading. Will need to adjust Switch in App
-  // }
-  // console.log("animal container", props.animals[1].url)
-  const testId: any = props.animals[1].gender
-  // console.log('testID', testId)
+  if (animals.length === 0) {
+    return <p>Please hang tight while we find your perfect pet...</p>; 
+
+  }
+  const testId: any = animals[1].description
+
   return (
-    <section className="animals-section">
-      <p>{testId}</p>
-    </section>
+    <div>
+      {animals.map(animal => (
+
+        <Link to={`/${animal.id}`} style={{ textDecoration: 'none' }} > 
+        <AnimalCard 
+        key={animal.id}
+        animalDetails={animal} />
+        </Link>
+      ))}
+    </div>
   )
 }
 

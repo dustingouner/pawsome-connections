@@ -1,0 +1,9 @@
+.animals-section {
+  height: 30em;
+  background-color: lightgrey;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0em 5em 0em 5em;
+  border-radius: 2em;
+}
+

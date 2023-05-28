@@ -1,10 +1,13 @@
 import React from "react";
+import './Header.css'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
+  const logo: JSX.Element = <img src={require('../../assets/pawsome.png')} alt='Pawsome Connections logo'/>
+  
   return (
-    <header>
-      <img/>
-      <h1>Pawsome Connections</h1>
+    <header className='header-section'>
+      <Link to='/'>{logo}</Link>
     </header>
   )
 }
