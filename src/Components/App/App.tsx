@@ -8,8 +8,16 @@ import getAnimals from '../../Api-Calls';
 import {useState, useEffect} from 'react'
 import { Route, Switch } from 'react-router-dom';
  
+
+
  type Animal = {
   id: number,
+  primary_photo_cropped: {
+    full: string,
+    large: string,
+    medium: string,
+    small: string
+ },
   url:string,
   age:string,
   breeds: object,
@@ -49,19 +57,19 @@ import { Route, Switch } from 'react-router-dom';
   
     console.log(animals, "animals");
 
-  useEffect(() => {
-    getAnimals()
-      .then((data) => {
-        setAnimals(data.animals)
-        console.log(data, "data")
-        console.log(data.animals, "DA")
-      })
-      .catch((error) => {
-        setError(error)
-        console.log(error)
-      })
-    },[])
-    console.log(animals, "animals")
+  // useEffect(() => {
+  //   getAnimals()
+  //     .then((data) => {
+  //       setAnimals(data.animals)
+  //       console.log(data, "data")
+  //       console.log(data.animals, "DA")
+  //     })
+  //     .catch((error) => {
+  //       setError(error)
+  //       console.log(error)
+  //     })
+  //   },[])
+  //   console.log(animals, "animals")
   
   return (
     <div className="App">
@@ -71,14 +79,14 @@ import { Route, Switch } from 'react-router-dom';
           <AnimalDetails />
         </Route>
         <Route exact path="/"> 
-        {animals.length > 0 ? (
-          // second way to resolve loading is by adding the above conditional. page would only render once data has loaded. Moved Header component inside of route, otherwise it would load first while waiting on the data. 
+        {/* {animals.length > 0 ? ( */}
+          {/* // second way to resolve loading is by adding the above conditional. page would only render once data has loaded. Moved Header component inside of route, otherwise it would load first while waiting on the data.  */}
           <>
           <Header />
           <Form />
           <Animals animals={animals} />
           </>
-        ) : null}
+        {/* ) : null} */}
         </Route>
       </Switch>
     </div>

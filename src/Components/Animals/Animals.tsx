@@ -1,9 +1,15 @@
 import React from "react";
 import './Animals.css'
-import '../AnimalCard/AnimalCard'
+import AnimalCard from '../AnimalCard/AnimalCard'
 
 type Animal = {
   id: number;
+  primary_photo_cropped: {
+    full: string,
+    large: string,
+    medium: string,
+    small: string
+ },
   url: string;
   age: string,
   breeds: object,
@@ -23,16 +29,20 @@ interface AnimalProps {
 const Animals:React.FC<AnimalProps> = (props:AnimalProps) => {
   const { animals } = props
 
-  // if (animals.length === 0) {
-  //   return <p>Please hang tight while we find your perfect pet...</p>; // Display a loading state, one way to resolve the delay with the data loading. Will need to adjust Switch in App
-  // }
-  // console.log("animal container", props.animals[1].url)
-  const testId: any = props.animals[1].gender
-  // console.log('testID', testId)
+  if (animals.length === 0) {
+    return <p>Please hang tight while we find your perfect pet...</p>; 
+
+  }
+  const testId: any = animals[1].description
+
   return (
-    <section className="animals-section">
-      <p>{testId}</p>
-    </section>
+    <div>
+      {animals.map(animal => (
+        <AnimalCard 
+        key={animal.id}
+        animalDetails={animal} />
+      ))}
+    </div>
   )
 }
 
