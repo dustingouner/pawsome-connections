@@ -1,9 +1,16 @@
-.animals-section {
+/* .animals-section {
   height: 30em;
   background-color: lightgrey;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 0em 5em 0em 5em;
   border-radius: 2em;
-}
+} */
 
+.animals-container {
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 7%;
+  grid-row-gap: 2%;
+  margin:4%;
+}
