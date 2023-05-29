@@ -1,4 +1,4 @@
-.animal-card{
+.animal-card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -6,13 +6,44 @@
   width: 100%;
   border-radius: 2px;
   margin: 5px;
-  padding: 5%;
-  color:black;
-  text-align:center;
+  color: black;
+  text-align: center;
+  background-color: #dedede;
+  position: relative;
+  transition: background-color 0.3s;
 }
 
+.animal-card:hover {
+  background-color: #8c3839;
+  color: white;
+}
 
-.animal-img{
-    height: 40vh;
-    width: 100%;
+.animal-img {
+  height: 36vh;
+  width: 100%;
+  border-radius: 0% 0% 30% 30%;
+  overflow: hidden;
+}
+
+.animal-name {
+  border-radius: 30% 30% 0% 0%;
+  color: #a05b87;
+  font-weight: bolder;
+}
+
+.animal-card:hover .animal-name {
+  color: white;
+}
+
+.animal-details {
+  margin: .5%;
+}
+
+.heart-icon {
+  height: 2.5vh;
+  width: 2vw;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #a05b87;
 }
