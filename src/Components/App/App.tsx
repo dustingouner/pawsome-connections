@@ -12,22 +12,51 @@ import { Animal } from '../../types';
   function App() {
     const [animals, setAnimals] = useState<Animal[]>([]);
     const [error, setError] = useState<any>('');
+    const [location, setLocation] = useState<number>(60090);
+
+    //  parseInt((document.getElementById('locationInput') as HTMLInputElement)?.value)
+    // // useEffect(() => {
+    //   const fetchData = async () => {
+    //     try {
+    //       const data = await getAnimals();
+    //       setAnimals(data.animals);
+    //       // console.log(data, "data");
+    //       // console.log(data.animals, "DA");
+    //     } catch (error) {
+    //       setError(error);
+    //       // console.log(error);
+    //     }
+    //   };
   
+    //   fetchData();
+    // }, []);
+
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const data = await getAnimals();
+          let data;
+          
+          if(location) {
+            console.log(location, "LOCATIIOOOOONNNNNNN")
+            data = await getLocation(location)
+          } else {
+            data = await getAnimals()
+          }
+        
           setAnimals(data.animals);
-          console.log(data, "data");
-          console.log(data.animals, "DA");
+          // console.log(data, "data");
+          // console.log(data.animals, "DA");
         } catch (error) {
           setError(error);
-          console.log(error);
+          // console.log(error);
         }
       };
   
       fetchData();
-    }, []);
+    }, [location]);
+
+
+
   
     console.log(animals, "animals");
   
@@ -42,7 +71,7 @@ import { Animal } from '../../types';
         {/* {animals.length > 0 ? ( */}
           {/* // second way to resolve loading is by adding the above conditional. page would only render once data has loaded. Moved Header component inside of route, otherwise it would load first while waiting on the data.  */}
           <Header />
-          <Form />
+          <Form setLocation={setLocation} />
           <Animals animals={animals} />
         {/* ) : null} */}
         </Route>
