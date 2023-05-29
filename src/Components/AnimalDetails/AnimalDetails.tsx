@@ -85,15 +85,15 @@ const AnimalDetails:React.FC<AnimalProps> = (props:AnimalProps) => {
           <h2 className="animal-info-header">Pet Details</h2>
           <p className="description">{description}</p>
           <section className="animal-stats">
-            <p>Adoption Status: {status} </p>
-            <p>Species: {type}</p>
-            <p>Gender: {gender}</p>
-            <p>Breed: {breeds.primary}</p>
-            <p>Age: {age} </p>
-            <p>Size: {size}</p>
-            <p>Spayed/Neutered: {attributes.spayed_neutered && 'yes' || 'no'}</p>
-            <p>House Trained: {attributes.house_trained && 'yes' || 'no'}</p>
-            <p>Spayed/Neutered: {attributes.spayed_neutered && 'yes' || 'no'}</p>
+            <p className="stats">Adoption Status: {status} </p>
+            <p className="stats">Species: {type}</p>
+            <p className="stats">Gender: {gender}</p>
+            <p className="stats">Breed: {breeds.primary}</p>
+            <p className="stats">Age: {age} </p>
+            <p className="stats">Size: {size}</p>
+            <p className="stats">Spayed/Neutered: {attributes.spayed_neutered && 'yes' || 'no'}</p>
+            <p className="stats">House Trained: {attributes.house_trained && 'yes' || 'no'}</p>
+            <p className="stats">Spayed/Neutered: {attributes.spayed_neutered && 'yes' || 'no'}</p>
           </section>
         </section>
         <section className="contact-info">
