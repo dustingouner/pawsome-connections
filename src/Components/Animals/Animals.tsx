@@ -37,7 +37,7 @@ type Animal = {
   size: string,
   species: string,
   type: string,
-};
+}
 
 interface AnimalProps {
   animals: Animal[]
@@ -53,7 +53,7 @@ const Animals:React.FC<AnimalProps> = (props:AnimalProps) => {
   const testId: any = animals[1].description
 
   return (
-    <div>
+    <div className="animals-container">
       {animals.map(animal => (
 
         <Link to={`/${animal.id}`} style={{ textDecoration: 'none' }} > 
