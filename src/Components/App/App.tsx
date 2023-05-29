@@ -43,6 +43,19 @@ type Animal = {
   size: string,
   species: string,
   type: string,
+  status: string,
+  attributes: {
+    house_trained: boolean,
+    spayed_neutered: boolean,
+    shots_current: boolean,
+  },
+  photos: [{
+    0: {
+      small: string,
+    }
+
+  }
+  ]
 };
  
 // async function App() {
@@ -89,7 +102,7 @@ type Animal = {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/:id" >
+        <Route exact path="/:id" component  ={AnimalDetails}>
           <Header />
           <AnimalDetails animals={animals}/>
         </Route>

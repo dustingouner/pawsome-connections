@@ -1,0 +1,110 @@
+.animal-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* padding: 5%; */
+  height: 80vh;
+  /* border: 2px solid black; */
+  background-color: #dc9790;
+  background-size: cover;
+  /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKcJZ0_4FpWG77QXVFx8u13X80CVYiIZi0vA&usqp=CAU);  
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.pet-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1em;
+  font-weight: bold;
+  color: white;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25em;
+  width: 25em;
+  background-color: white;
+  /* border: 2px solid black; */
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  /* height: 60em; */
+}
+
+.pet-photo {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  height: 70%;
+  width: 20em;
+}
+
+.other-photos {
+  display: flex;
+  border: 2px solid black;
+  height: 30%;
+  width: 100%;
+
+}
+
+.animal-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 25em;
+  margin: 1em;
+  /* background-color: lightblue; */
+  /* border: 2px solid green; */
+
+}
+
+.animal-info {
+  /* border: 2px solid black; */
+  width: 25em;
+  background-color: white;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.animal-info-header{
+  display: flex;
+  justify-content: center;
+}
+
+.animal-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1em;
+  margin-top: 3em;
+  
+}
+.stats {
+  margin: 0
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  /* border: 2px solid black; */
+  width: 25em;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.description {
+  height: 5em;
+  margin: 1em;
+}
+
+.contact-info-header {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-details {
+  margin: 1em
+}
+
