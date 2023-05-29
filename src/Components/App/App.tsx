@@ -48,7 +48,14 @@ type Animal = {
     house_trained: boolean,
     spayed_neutered: boolean,
     shots_current: boolean,
+  },
+  photos: [{
+    0: {
+      small: string,
+    }
+
   }
+  ]
 };
  
 // async function App() {

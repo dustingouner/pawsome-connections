@@ -41,7 +41,14 @@ type Animal = {
     house_trained: boolean,
     spayed_neutered: boolean,
     shots_current: boolean,
+  },
+  photos: [{
+    0: {
+      small: string,
+    }
+
   }
+  ]
 };
 
 interface AnimalProps {
@@ -58,35 +65,47 @@ const AnimalDetails:React.FC<AnimalProps> = (props:AnimalProps) => {
     return <p>We're sorry, we could not locate this pet.</p>
   }
 
-  const { primary_photo_cropped, age, status, breeds, contact, description, gender, name, size, type, attributes} = selectedAnimal
-  const imgSrc = primary_photo_cropped?.small
+  const { primary_photo_cropped, age, status, breeds, contact, description, gender, name, size, type, attributes, photos} = selectedAnimal
+  const imgSrc = primary_photo_cropped?.full
   const fallBackImage = require('../../assets/pawsome.png')
+  const morePhotos = photos
+  console.log('morephotos', morePhotos)
   console.log('petDetails', animals)
   return (
     <div className="animal-details-container">
-        <h1 className="pet-name">{name}</h1>
+        <h1 className="pet-name">{name}</h1> 
       <div className="animal-details">
         <div className="image-container">
-           <img className="pet-photo" src={imgSrc || fallBackImage} alt={`${name}'s photo` || 'Pet photo not available, logo image shown'}/>
+          <img className="pet-photo" src={imgSrc || fallBackImage} alt={`${name}'s photo` || 'Pet photo not available, logo image shown'}/>
+          <div className="other-photos">
+            <p>more photos here</p>
+          </div>
         </div>
         <section className="animal-info">
-          <p className="description">Description: {description}</p>
-          <p>Adoption Status: {status} </p>
-          <p>Species: {type}</p>
-          <p>Gender: {gender}</p>
-          <p>Breed: {breeds.primary}</p>
-          <p>Age: {age} </p>
-          <p>Size: {size}</p>
-          <p>Spayed/Neutered: {attributes.spayed_neutered && 'yes' || 'no'}</p>
-          <p>House Trained: {attributes.house_trained && 'yes' || 'no'}</p>
-          <p>Spayed/Neutered: {attributes.spayed_neutered && 'yes' || 'no'}</p>
+          <h2 className="animal-info-header">Pet Details</h2>
+          <p className="description">{description}</p>
+          <section className="animal-stats">
+            <p>Adoption Status: {status} </p>
+            <p>Species: {type}</p>
+            <p>Gender: {gender}</p>
+            <p>Breed: {breeds.primary}</p>
+            <p>Age: {age} </p>
+            <p>Size: {size}</p>
+            <p>Spayed/Neutered: {attributes.spayed_neutered && 'yes' || 'no'}</p>
+            <p>House Trained: {attributes.house_trained && 'yes' || 'no'}</p>
+            <p>Spayed/Neutered: {attributes.spayed_neutered && 'yes' || 'no'}</p>
+          </section>
         </section>
         <section className="contact-info">
+          <h2 className="contact-info-header">Contant Information</h2>
+          <section className="contact-details">
+
           <p>Location: {contact.address.city}, {contact.address.state}</p>
           <p>Email: {contact.email}</p>
           <p>Phone Number: {contact.phone}</p>
+          </section>
         </section>
-      </div>
+      </div> 
     </div>
   )
 }
