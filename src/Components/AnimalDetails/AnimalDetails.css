@@ -1,0 +1,44 @@
+.animal-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+  height: 100%
+  
+
+}
+
+.pet-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.image-container {
+  height: 100%;
+}
+
+.pet-photo {
+  border: 2px solid black;
+  /* object-fit: cover; */
+}
+
+.animal-details {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.animal-info {
+  border: 2px solid black;
+  width: 60%;
+}
+
+.contact-info {
+  border: 2px solid black;
+}
+
+.description {
+  overflow: scroll;
+}
