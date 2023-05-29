@@ -1,16 +1,35 @@
-/* .animals-section {
-  height: 30em;
-  background-color: lightgrey;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 0em 5em 0em 5em;
-  border-radius: 2em;
-} */
-
 .animals-container {
   display:grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 7%;
+  grid-column-gap: 5%;
   grid-row-gap: 2%;
-  margin:4%;
+  margin-left:5%;
+  margin-right: 5%;
+}
+
+
+@media screen and (min-width: 48em) {
+  .animals-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3%; 
+    grid-row-gap: 1%; 
+    margin: 2%; 
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .animals-container {
+    grid-template-columns: repeat(5, 1fr); 
+    grid-column-gap: 3%; 
+    grid-row-gap: 3%;
+    margin: 6%; 
+  } 
+}
+@media screen and (max-width: 40em){
+  .animals-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5%; 
+    grid-row-gap: 1%; 
+    margin: 5%; 
+  }
 }
