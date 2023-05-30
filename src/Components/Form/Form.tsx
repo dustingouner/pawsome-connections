@@ -3,27 +3,30 @@ import { useState } from "react";
 import './Form.css'
 
 interface FormProps {
-  setLocation: React.Dispatch<React.SetStateAction<number>>;
+  setLocation: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Form:React.FC<FormProps> = (props:FormProps) => {
   const [animalType, setAnimalType] = useState('')
-  const [location, setLocation] = useState(0)
+  const [zipCode, setZipCode] = useState("")
   
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setLocation(parseInt(event.target.value))
-    props.setLocation(location)
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    props.setLocation(zipCode)
+    console.log(props, "props")
+    console.log(props, "location")
   }
 
   return (
-    <form className='form-section'>
+    <form className='form-section' onSubmit={event => handleSubmit(event)}>
       <select id="animalTypeSelected">
         <option>Dog</option>
         <option>Cat</option>
         <option>Other</option>
       </select>
       <label htmlFor="location">Find Pets by Zip Code:</label>
-      <input id="locationInput" name="location" type="number" onChange={event => handleChange(event)} placeholder="Input Zip Code"></input>
+      <input id="locationInput" name="location" type="number" placeholder="Input Zip Code" onChange={event => setZipCode(event.target.value)}></input>
+      <input type="submit"/>
     </form>
   )
 

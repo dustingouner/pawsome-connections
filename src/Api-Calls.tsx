@@ -4,25 +4,26 @@ import React from "react";
 
 const getAnimals = () => {
   return fetch(
-    "https://api.petfinder.com/v2/animals?location=60521&age=senior",
+    "https://api.petfinder.com/v2/animals?age=senior",
     {
       method: "GET",
       headers: {
         Authorization:
-          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjgxMzFkZmI2ZWE0M2E1YjZmZDg2ZTAwMDEzM2UzMjRkM2Q2NTA2ZmFjMzRlOWE2N2VjZjUyMzU4ZDk2NjliOWQ3MTM0ODJhNmUwMTYzYzM5IiwiaWF0IjoxNjg1MzE5OTkyLCJuYmYiOjE2ODUzMTk5OTIsImV4cCI6MTY4NTMyMzU5Miwic3ViIjoiIiwic2NvcGVzIjpbXX0.Z4i5z6pxqXPiy_FkiiiZV7WLHx2qHXHPAnYFZK6qSL7qZdpdWy4bzENPVz5LCHUsEYYWTjp79EAIToeXlW7D_mKDENn5Eu3DhxRDCqVrHZtV_SYF-mXjjA_YW0gpJivtOB_TOJBjsj7H4VcXIS7bGQgSZHX1K8OauIDZeMStFDcsq0CxG2XRAcaY4z286mUKH3C_Mx9Bt7UBBvP028lam2IETlUSA4r1zXi0QnrQeuFEo8lBn-S74AR-Cim_npFucDm_9d1hI4q3ePKdqPzOp6l7EOhGMpUVUVhOeOyOtV0HZgPzi3IHsdyHXv5ajMqpDfMANGFDwKLEfZKKpPsQ1Q",
+          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjI5OTMxYTc2YjYxMzMxOTE5MWFjOGU3ZGYwMWQ0ZTI4MjE2ODYyMGEyZjA0OGY0ODRmODZjNjU3MGM1MjE3ZWM3NzdjNjcxYmRkMmViMTBlIiwiaWF0IjoxNjg1NDg3NDE2LCJuYmYiOjE2ODU0ODc0MTYsImV4cCI6MTY4NTQ5MTAxNiwic3ViIjoiIiwic2NvcGVzIjpbXX0.SuQEVFxvtgT2nQlpvc0d4DfuqaQXdkxt-qalviYCKqxceU0583VW662c1n1WO5mQ6yowD7AaM-YKATCdPKVjLG10iF6kaTc7AGoiq4caxtbCqmI-kI6r6N-C48oRnxh3yTyJWvVfbAQJ58LQk5Cl8qSuCZCR8hWmsL2YQjTEgU3WomItfMBEGWCGh3_sft4JRnoFxFzec5-kxGA2DITBVMQSDXhGrCumo3RCp9w-p1kZisOek_u7Zpl9wQY8b8AKC7QjYiGQd2by9veM6hU09JbuSXnrx76zQuurCha3W_pEqZbXqIUXIbTvFmUQt2AY_P-QbNnXyk66LoEDcyrcKA",
       },
     }
   ).then((response) => response.json());
 }
 
-const getLocation = (zipCode:number) => {
+const getLocation = (zipCode:string) => {
+  console.log("this is fetching!")
   return fetch(
     `https://api.petfinder.com/v2/animals?age=senior&location=${zipCode}`,
     {
       method: "GET",
       headers: {
         Authorization:
-          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjgxMzFkZmI2ZWE0M2E1YjZmZDg2ZTAwMDEzM2UzMjRkM2Q2NTA2ZmFjMzRlOWE2N2VjZjUyMzU4ZDk2NjliOWQ3MTM0ODJhNmUwMTYzYzM5IiwiaWF0IjoxNjg1MzE5OTkyLCJuYmYiOjE2ODUzMTk5OTIsImV4cCI6MTY4NTMyMzU5Miwic3ViIjoiIiwic2NvcGVzIjpbXX0.Z4i5z6pxqXPiy_FkiiiZV7WLHx2qHXHPAnYFZK6qSL7qZdpdWy4bzENPVz5LCHUsEYYWTjp79EAIToeXlW7D_mKDENn5Eu3DhxRDCqVrHZtV_SYF-mXjjA_YW0gpJivtOB_TOJBjsj7H4VcXIS7bGQgSZHX1K8OauIDZeMStFDcsq0CxG2XRAcaY4z286mUKH3C_Mx9Bt7UBBvP028lam2IETlUSA4r1zXi0QnrQeuFEo8lBn-S74AR-Cim_npFucDm_9d1hI4q3ePKdqPzOp6l7EOhGMpUVUVhOeOyOtV0HZgPzi3IHsdyHXv5ajMqpDfMANGFDwKLEfZKKpPsQ1Q",
+          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjI5OTMxYTc2YjYxMzMxOTE5MWFjOGU3ZGYwMWQ0ZTI4MjE2ODYyMGEyZjA0OGY0ODRmODZjNjU3MGM1MjE3ZWM3NzdjNjcxYmRkMmViMTBlIiwiaWF0IjoxNjg1NDg3NDE2LCJuYmYiOjE2ODU0ODc0MTYsImV4cCI6MTY4NTQ5MTAxNiwic3ViIjoiIiwic2NvcGVzIjpbXX0.SuQEVFxvtgT2nQlpvc0d4DfuqaQXdkxt-qalviYCKqxceU0583VW662c1n1WO5mQ6yowD7AaM-YKATCdPKVjLG10iF6kaTc7AGoiq4caxtbCqmI-kI6r6N-C48oRnxh3yTyJWvVfbAQJ58LQk5Cl8qSuCZCR8hWmsL2YQjTEgU3WomItfMBEGWCGh3_sft4JRnoFxFzec5-kxGA2DITBVMQSDXhGrCumo3RCp9w-p1kZisOek_u7Zpl9wQY8b8AKC7QjYiGQd2by9veM6hU09JbuSXnrx76zQuurCha3W_pEqZbXqIUXIbTvFmUQt2AY_P-QbNnXyk66LoEDcyrcKA",
       },
     }
   ).then((response) => response.json());

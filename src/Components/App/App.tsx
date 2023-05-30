@@ -12,10 +12,10 @@ import { Animal } from '../../types';
   function App() {
     const [animals, setAnimals] = useState<Animal[]>([]);
     const [error, setError] = useState<any>('');
-    const [location, setLocation] = useState<number>(60090);
+    const [location, setLocation] = useState<string>('');
 
     //  parseInt((document.getElementById('locationInput') as HTMLInputElement)?.value)
-    // // useEffect(() => {
+    // useEffect(() => {
     //   const fetchData = async () => {
     //     try {
     //       const data = await getAnimals();
@@ -36,7 +36,7 @@ import { Animal } from '../../types';
         try {
           let data;
           
-          if(location) {
+          if(location !== "") {
             console.log(location, "LOCATIIOOOOONNNNNNN")
             data = await getLocation(location)
           } else {
@@ -57,7 +57,7 @@ import { Animal } from '../../types';
 
 
 
-  
+  console.log(location, "line 60")
     console.log(animals, "animals");
   
   return (
