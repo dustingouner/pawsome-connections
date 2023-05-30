@@ -2,3 +2,7 @@
   text-align: center;
 } */
 
+html, body {
+  height: 100vh;
+  
+}

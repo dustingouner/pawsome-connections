@@ -63,7 +63,7 @@ import { Animal } from '../../types';
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/:id" >
+        <Route exact path="/:id" component  ={AnimalDetails}>
           <Header />
           <AnimalDetails animals={animals}/>
         </Route>
