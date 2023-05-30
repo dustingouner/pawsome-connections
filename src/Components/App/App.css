@@ -1,6 +1,10 @@
-/* .App {
+.App, html {
+  background-color: #e7948f;
   text-align: center;
-} */
+  min-height: 100vh;
+  height: 100%;
+  margin-bottom: 5px;
+}
 
 html, body {
   height: 100vh;

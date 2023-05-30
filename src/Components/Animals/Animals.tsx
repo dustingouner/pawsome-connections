@@ -16,7 +16,7 @@ const Animals:React.FC<AnimalProps> = (props:AnimalProps) => {
   }
 
   return (
-    <div>
+    <div className="animals-container">
       {animals.map(animal => (
 
         <Link key={animal.id} to={`/${animal.id}`} style={{ textDecoration: 'none' }} > 
