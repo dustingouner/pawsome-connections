@@ -18,7 +18,7 @@ const AnimalCard:React.FC<AnimalProps> = (props:AnimalProps) => {
         <img className="animal-img" src={imgSrc || fallBackImage} alt="Photos are in the works!" />
         <img className="heart-icon" src={heart}></img>
         <h2 className="animal-name">{animalDetails.name}</h2>
-        <p className="animal-details">{`${animalDetails.age} | ${animalDetails.breeds.primary} | ${animalDetails.contact.address.city}, ${animalDetails.contact.address.state}`}</p>
+        <p className="animal-card-details">{`${animalDetails.age} | ${animalDetails.breeds.primary} | ${animalDetails.contact.address.city}, ${animalDetails.contact.address.state}`}</p>
     </section>
   );
 }

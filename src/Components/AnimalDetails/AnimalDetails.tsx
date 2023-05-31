@@ -1,5 +1,7 @@
 import React from "react";
 import { Animal } from '../../types';
+import { useParams } from "react-router-dom"
+import './AnimalDetails.css'
 
 interface AnimalProps {
   animals: Animal[]
@@ -21,6 +23,7 @@ const AnimalDetails:React.FC<AnimalProps> = (props:AnimalProps) => {
   const morePhotos = photos
   console.log('morephotos', morePhotos)
   console.log('petDetails', animals)
+  console.log('description', description)
   return (
     <div className="animal-details-container">
         <h1 className="pet-name">{name}</h1> 
@@ -49,7 +52,6 @@ const AnimalDetails:React.FC<AnimalProps> = (props:AnimalProps) => {
         <section className="contact-info">
           <h2 className="contact-info-header">Contant Information</h2>
           <section className="contact-details">
-
           <p>Location: {contact.address.city}, {contact.address.state}</p>
           <p>Email: {contact.email}</p>
           <p>Phone Number: {contact.phone}</p>

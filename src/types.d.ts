@@ -32,6 +32,19 @@ type Animal = {
   size: string,
   species: string,
   type: string,
+  status: string,
+  attributes: {
+    house_trained: boolean,
+    spayed_neutered: boolean,
+    shots_current: boolean,
+  },
+  photos: [{
+    0: {
+      small: string,
+    }
+
+  }
+  ]
 };
 
 export { Animal };
