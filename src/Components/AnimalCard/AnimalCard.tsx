@@ -4,18 +4,21 @@ import { Animal } from "../../types";
 
 
 interface AnimalProps {
-  animalDetails: Animal
+  animalDetails: Animal,
+  favoriteAnimals: Function
 }
 
 const AnimalCard:React.FC<AnimalProps> = (props:AnimalProps) => {
-  const { animalDetails } = props
+  const { animalDetails, favoriteAnimals } = props
   const fallBackImage = require('../../assets/sorry-image.png')  
   // const heart = require('../../assets/heart.png')  
   const imgSrc = animalDetails.primary_photo_cropped?.small
   const [isFavorite, setFavorite] = useState(false)
+  
 
-  const toggleFavorite = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.stopPropagation();
+  const toggleFavorite = (id: number, event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault()
+    favoriteAnimals(id)
     setFavorite(!isFavorite)
   }
 
@@ -23,7 +26,7 @@ const AnimalCard:React.FC<AnimalProps> = (props:AnimalProps) => {
     <section className="animal-card">
         <img className="animal-img" src={imgSrc || fallBackImage} alt="Photos are in the works!" />
         {/* <img className="heart-icon" src={heart}></img> */}
-        <button className="favorite-button" onClick={toggleFavorite} >
+        <button className="favorite-button" onClick={event => toggleFavorite(animalDetails.id, event)} >
         {isFavorite ? "🩷" : "🤍"}
       </button>
         <h2 className="animal-name">{animalDetails.name}</h2>

@@ -7,29 +7,13 @@ import AnimalDetails from '../AnimalDetails/AnimalDetails'
 import { getAnimals, getLocation } from '../../Api-Calls';
 import {useState, useEffect} from 'react'
 import { Route, Switch } from 'react-router-dom';
-import { Animal } from '../../types';
+import { Animal, EventHandler } from '../../types';
 
   function App() {
     const [animals, setAnimals] = useState<Animal[]>([]);
     const [error, setError] = useState<any>('');
     const [location, setLocation] = useState<string>('');
-
-    //  parseInt((document.getElementById('locationInput') as HTMLInputElement)?.value)
-    // useEffect(() => {
-    //   const fetchData = async () => {
-    //     try {
-    //       const data = await getAnimals();
-    //       setAnimals(data.animals);
-    //       // console.log(data, "data");
-    //       // console.log(data.animals, "DA");
-    //     } catch (error) {
-    //       setError(error);
-    //       // console.log(error);
-    //     }
-    //   };
-  
-    //   fetchData();
-    // }, []);
+    const [favorites, setFavorites] = useState<Animal[]>([]);
 
     useEffect(() => {
       const fetchData = async () => {
@@ -37,28 +21,33 @@ import { Animal } from '../../types';
           let data;
           
           if(location !== "") {
-            console.log(location, "LOCATIIOOOOONNNNNNN")
             data = await getLocation(location)
           } else {
             data = await getAnimals()
           }
         
           setAnimals(data.animals);
-          // console.log(data, "data");
-          // console.log(data.animals, "DA");
-        } catch (error) {
-          setError(error);
-          // console.log(error);
-        }
+
+          } catch (error) {
+            setError(error);
+          }
       };
   
       fetchData();
     }, [location]);
 
 
+    const favoriteAnimals:Function = (id:number) => {
+      const findAnimal: Animal | undefined = animals.find(animal => animal.id === id);
 
+      if(findAnimal) {
+        setFavorites([...favorites, findAnimal])
+      }
+    }
+
+  console.log(favorites, 'favoriteseeeese')
   console.log(location, "line 60")
-    console.log(animals, "animals");
+  console.log(animals, "animals");
   
   return (
     <div className="App">
@@ -72,7 +61,7 @@ import { Animal } from '../../types';
           {/* // second way to resolve loading is by adding the above conditional. page would only render once data has loaded. Moved Header component inside of route, otherwise it would load first while waiting on the data.  */}
           <Header />
           <Form setLocation={setLocation} />
-          <Animals animals={animals} />
+          <Animals animals={animals} favoriteAnimals={favoriteAnimals} />
         {/* ) : null} */}
         </Route>
       </Switch>
