@@ -24,8 +24,10 @@ const Form:React.FC<FormProps> = (props:FormProps) => {
         <option>Cat</option>
         <option>Other</option>
       </select>
-      <label htmlFor="location">Find Pets by Zip Code:</label>
-      <input id="locationInput" name="location" type="number" placeholder="Input Zip Code" onChange={event => setZipCode(event.target.value)}></input>
+      <div>
+        <label htmlFor="location">Find Pets by Zip Code:</label>
+        <input id="locationInput" name="location" type="number" placeholder="Input Zip Code" onChange={event => setZipCode(event.target.value)}></input>
+      </div>
       <input type="submit"/>
     </form>
   )

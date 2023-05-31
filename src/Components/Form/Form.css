@@ -1,9 +1,10 @@
 .form-section {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 5em;
   background-color: rgb(222, 222, 222);
-  margin-bottom: 2em;
+  width: 50vw
+  /* margin-bottom: 2em; */
 }
 

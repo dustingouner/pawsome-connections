@@ -14,6 +14,7 @@ import { Animal, EventHandler } from '../../types';
     const [error, setError] = useState<any>('');
     const [location, setLocation] = useState<string>('');
     const [favorites, setFavorites] = useState<Animal[]>([]);
+    const [button, setButton] = useState<string>('Show Favorites');
 
     useEffect(() => {
       const fetchData = async () => {
@@ -51,6 +52,18 @@ import { Animal, EventHandler } from '../../types';
       setFavorites(favoriteAnimals)
     }
 
+    const displayFavorites: Function = () => {
+      if(favorites && favorites !== animals) {
+        setAnimals(favorites)
+        setButton("Show All")
+        // document.getElementById('showFavorites').innerText = 'Show All'
+      } else if(favorites ) {
+        getAnimals()
+        .then(data => setAnimals(data.animals))
+        setButton("Show Favorites")
+      }
+    }
+
   console.log(favorites, 'favoriteseeeese')
   console.log(location, "line 60")
   console.log(animals, "animals");
@@ -64,7 +77,10 @@ import { Animal, EventHandler } from '../../types';
         </Route>
         <Route exact path="/"> 
           <Header />
+          <div className="submission-container">
+          <button id="showFavorites" className='show-favorites-btn' onClick={event => displayFavorites(event)}>{button}</button>
           <Form setLocation={setLocation} />
+          </div>
           <Animals animals={animals} favoriteAnimals={favoriteAnimals} unfavoriteAnimals={unfavoriteAnimals}/>
         </Route>
       </Switch>
