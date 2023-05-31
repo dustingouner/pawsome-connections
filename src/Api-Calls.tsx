@@ -1,31 +1,32 @@
-
 // curl -d "grant_type=client_credentials&client_id=o34CwH6jqwAgLCbYcec4t0ZRRxWSrL0GyEBnN3wRULUtaM1b4B&client_secret=Sn6nsQvDYN6gEwsAuXQmS9cLFxFcLf9LVkv8ndsE" https://api.petfinder.com/v2/oauth2/token
-
-
-
-
 
 import React from "react";
 
 const getAnimals = () => {
-     return fetch(
-       "https://api.petfinder.com/v2/animals?location=60521&type=dog&age=senior",
-       {
-         method: "GET",
-         headers: {
-           Authorization:
-             "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjlmM2M2ZGMzNWRhM2MxMzYwZDE0N2E5ZmQ5ZTI5YWJiZDY2MDk2YzZkZjAwOTY4MWRjZmIzODIyZDA3ZGZkYzNmODdlNWRkNWQ3NDY4ODJkIiwiaWF0IjoxNjg1Mzg2MTUxLCJuYmYiOjE2ODUzODYxNTEsImV4cCI6MTY4NTM4OTc1MSwic3ViIjoiIiwic2NvcGVzIjpbXX0.f4pXwJIsAlnzdlnrNNX68Dn1PifGP0NPBGCaTMBR0kmJf5X4BdGxB2cr8-NEefz1bI3T8HmkF2qQk_Y8yI_QphLUOFw5Xq9009gKWJ-0aa0q0MuuGR80EscEdbC8htbsSHjU-_cF6kQER0k7zYMfhMkbIX9bQRtIiJ6mDAG58mSh-LHppGmLXHcgGdB0YYUcllioGqBgqXtJPxqOpgHJrBt7ejYiObBEQ-HuMSuVV7RxheRbFEFAugqlq_zOpH3g57ueOEza9sPuJkkC_-da-dP9q-ng1hgKTvPtIHpJrubr4jJV5OhFLwStAefml6SgFWusuQuBAeTycwiS0akTNw",
-         },
-       }
-     ).then((response) => response.json());
-     //    .then((data) => {
-     //      // Handle the response data
-     //      console.log(data);
-     //    })
-     //    .catch((error) => {
-     //      // Handle any errors
-     //      console.error("Error:", error);
-     //    });
+  return fetch(
+    "https://api.petfinder.com/v2/animals?age=senior",
+    {
+      method: "GET",
+      headers: {
+        Authorization:
+          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjI5OTMxYTc2YjYxMzMxOTE5MWFjOGU3ZGYwMWQ0ZTI4MjE2ODYyMGEyZjA0OGY0ODRmODZjNjU3MGM1MjE3ZWM3NzdjNjcxYmRkMmViMTBlIiwiaWF0IjoxNjg1NDg3NDE2LCJuYmYiOjE2ODU0ODc0MTYsImV4cCI6MTY4NTQ5MTAxNiwic3ViIjoiIiwic2NvcGVzIjpbXX0.SuQEVFxvtgT2nQlpvc0d4DfuqaQXdkxt-qalviYCKqxceU0583VW662c1n1WO5mQ6yowD7AaM-YKATCdPKVjLG10iF6kaTc7AGoiq4caxtbCqmI-kI6r6N-C48oRnxh3yTyJWvVfbAQJ58LQk5Cl8qSuCZCR8hWmsL2YQjTEgU3WomItfMBEGWCGh3_sft4JRnoFxFzec5-kxGA2DITBVMQSDXhGrCumo3RCp9w-p1kZisOek_u7Zpl9wQY8b8AKC7QjYiGQd2by9veM6hU09JbuSXnrx76zQuurCha3W_pEqZbXqIUXIbTvFmUQt2AY_P-QbNnXyk66LoEDcyrcKA",
+      },
+    }
+  ).then((response) => response.json());
 }
 
-export default getAnimals;
+const getLocation = (zipCode:string) => {
+  console.log("this is fetching!")
+  return fetch(
+    `https://api.petfinder.com/v2/animals?age=senior&location=${zipCode}`,
+    {
+      method: "GET",
+      headers: {
+        Authorization:
+          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjI5OTMxYTc2YjYxMzMxOTE5MWFjOGU3ZGYwMWQ0ZTI4MjE2ODYyMGEyZjA0OGY0ODRmODZjNjU3MGM1MjE3ZWM3NzdjNjcxYmRkMmViMTBlIiwiaWF0IjoxNjg1NDg3NDE2LCJuYmYiOjE2ODU0ODc0MTYsImV4cCI6MTY4NTQ5MTAxNiwic3ViIjoiIiwic2NvcGVzIjpbXX0.SuQEVFxvtgT2nQlpvc0d4DfuqaQXdkxt-qalviYCKqxceU0583VW662c1n1WO5mQ6yowD7AaM-YKATCdPKVjLG10iF6kaTc7AGoiq4caxtbCqmI-kI6r6N-C48oRnxh3yTyJWvVfbAQJ58LQk5Cl8qSuCZCR8hWmsL2YQjTEgU3WomItfMBEGWCGh3_sft4JRnoFxFzec5-kxGA2DITBVMQSDXhGrCumo3RCp9w-p1kZisOek_u7Zpl9wQY8b8AKC7QjYiGQd2by9veM6hU09JbuSXnrx76zQuurCha3W_pEqZbXqIUXIbTvFmUQt2AY_P-QbNnXyk66LoEDcyrcKA",
+      },
+    }
+  ).then((response) => response.json());
+}
+
+export { getAnimals, getLocation };
