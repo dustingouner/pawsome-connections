@@ -6,11 +6,12 @@ import { Link } from 'react-router-dom'
 
 interface AnimalProps {
   animals: Animal[],
-  favoriteAnimals: Function
+  favoriteAnimals: Function,
+  unfavoriteAnimals: Function,
 }
 
 const Animals:React.FC<AnimalProps> = (props:AnimalProps) => {
-  const { animals, favoriteAnimals } = props
+  const { animals, favoriteAnimals, unfavoriteAnimals } = props
 
   if (animals.length === 0) {
     return <p>Please hang tight while we find your perfect pet...</p>; 
@@ -22,7 +23,8 @@ const Animals:React.FC<AnimalProps> = (props:AnimalProps) => {
 
         <Link key={animal.id} to={`/${animal.id}`} style={{ textDecoration: 'none' }} > 
         <AnimalCard
-        favoriteAnimals={favoriteAnimals} 
+        favoriteAnimals={favoriteAnimals}
+        unfavoriteAnimals={unfavoriteAnimals}
         key={animal.id}
         animalDetails={animal} />
         </Link>

@@ -45,6 +45,12 @@ import { Animal, EventHandler } from '../../types';
       }
     }
 
+    const unfavoriteAnimals: Function = (id:number) => {
+      const favoriteAnimals: Animal[] = favorites.filter(animal => animal.id !== id)
+
+      setFavorites(favoriteAnimals)
+    }
+
   console.log(favorites, 'favoriteseeeese')
   console.log(location, "line 60")
   console.log(animals, "animals");
@@ -57,12 +63,9 @@ import { Animal, EventHandler } from '../../types';
           <AnimalDetails animals={animals}/>
         </Route>
         <Route exact path="/"> 
-        {/* {animals.length > 0 ? ( */}
-          {/* // second way to resolve loading is by adding the above conditional. page would only render once data has loaded. Moved Header component inside of route, otherwise it would load first while waiting on the data.  */}
           <Header />
           <Form setLocation={setLocation} />
-          <Animals animals={animals} favoriteAnimals={favoriteAnimals} />
-        {/* ) : null} */}
+          <Animals animals={animals} favoriteAnimals={favoriteAnimals} unfavoriteAnimals={unfavoriteAnimals}/>
         </Route>
       </Switch>
     </div>

@@ -5,11 +5,12 @@ import { Animal } from "../../types";
 
 interface AnimalProps {
   animalDetails: Animal,
-  favoriteAnimals: Function
+  favoriteAnimals: Function,
+  unfavoriteAnimals: Function,
 }
 
 const AnimalCard:React.FC<AnimalProps> = (props:AnimalProps) => {
-  const { animalDetails, favoriteAnimals } = props
+  const { animalDetails, favoriteAnimals, unfavoriteAnimals } = props
   const fallBackImage = require('../../assets/sorry-image.png')  
   // const heart = require('../../assets/heart.png')  
   const imgSrc = animalDetails.primary_photo_cropped?.small
@@ -18,8 +19,12 @@ const AnimalCard:React.FC<AnimalProps> = (props:AnimalProps) => {
 
   const toggleFavorite = (id: number, event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault()
-    favoriteAnimals(id)
     setFavorite(!isFavorite)
+    if(isFavorite) {
+      unfavoriteAnimals(id)
+    } else {
+      favoriteAnimals(id)
+    }
   }
 
   return (
