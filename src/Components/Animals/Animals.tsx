@@ -21,7 +21,7 @@ const Animals:React.FC<AnimalProps> = (props:AnimalProps) => {
     <div className="animals-container">
       {animals.map(animal => (
 
-        <Link key={animal.id} to={`/${animal.id}`} style={{ textDecoration: 'none' }} > 
+        <Link key={animal.id} to={`/animal/${animal.id}`} style={{ textDecoration: 'none' }} > 
         <AnimalCard
         favoriteAnimals={favoriteAnimals}
         unfavoriteAnimals={unfavoriteAnimals}

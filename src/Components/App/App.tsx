@@ -6,7 +6,7 @@ import Animals from '../Animals/Animals';
 import AnimalDetails from '../AnimalDetails/AnimalDetails'
 import { getAnimals, getAnimalSelected} from '../../Api-Calls';
 import {useState, useEffect} from 'react'
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link, useLocation } from 'react-router-dom';
 import { Animal, EventHandler } from '../../types';
 
   function App() {
@@ -17,6 +17,7 @@ import { Animal, EventHandler } from '../../types';
     const [button, setButton] = useState<string>('Show Favorites');
     const [animalType, setAnimal] = useState<string>('')
     const [link, setLink] = useState<string>("favorites")
+    const url:string = useLocation().pathname
 
     useEffect(() => {
       const fetchData = async () => {
@@ -42,12 +43,10 @@ import { Animal, EventHandler } from '../../types';
       fetchData();
     }, [location, animalType]);
 
-    const favoriteAnimals:Function = (id:number) => {
-      const findAnimal: Animal | undefined = animals.find(animal => animal.id === id);
-
-      if(findAnimal) {
-        setFavorites([...favorites, findAnimal])
-      }
+    const favoriteAnimals:Function = (animal:Animal) => {
+      setFavorites([...favorites, animal])
+      console.log(favorites)
+      console.log(animal)
     }
 
     const unfavoriteAnimals: Function = (id:number) => {
@@ -57,49 +56,56 @@ import { Animal, EventHandler } from '../../types';
     }
 
     const displayFavorites: Function = () => {
-      if(favorites && favorites !== animals) {
-        setAnimals(favorites)
+      if(url === "/") {
         setButton("Show All")
-      } else if(favorites ) {
-        getAnimals()
-        .then(data => setAnimals(data.animals))
+        setLink("/")
+        console.log(favorites, "favorites line 64")
+        console.log(link, "link line 65")
+        console.log(url)
+      } else if(url === "/favorites") {
         setButton("Show Favorites")
+        setLink("/favorites")
+        console.log(link, "link 70")
+        console.log(animals, "animals")
       }
     }
-  
   return (
     <div className="App">
-      <Switch>
-        <Route exact path={link}>
+        <Route exact path="/favorites">
           <Header />
           <div className="submission-container">
-            <button
-              id="showFavorites"
-              className="show-favorites-btn"
-              onClick={(event) => displayFavorites(event)}>
-              {button}
-            </button>
+            <Link to="/">
+              <button
+                id="showFavorites"
+                className="show-favorites-btn"
+                onClick={(event) => displayFavorites(event)}
+              >
+                {button}
+              </button>
+            </Link>
           </div>
           <Animals
-            animals={animals}
+            animals={favorites}
             favoriteAnimals={favoriteAnimals}
             unfavoriteAnimals={unfavoriteAnimals}
           />
         </Route>
-        <Route exact path="/:id" component={AnimalDetails}>
+        <Route exact path="/animal/:id">
           <Header />
           <AnimalDetails animals={animals} />
         </Route>
         <Route exact path="/">
           <Header />
           <div className="submission-container">
-            <button
-              id="showFavorites"
-              className="show-favorites-btn"
-              onClick={(event) => displayFavorites(event)}
-            >
-              {button}
-            </button>
+            <Link to={link}>
+              <button
+                id="showFavorites"
+                className="show-favorites-btn"
+                onClick={(event) => displayFavorites(event)}
+              >
+                {button}
+              </button>
+            </Link>
             <Form setLocation={setLocation} setAnimal={setAnimal} />
           </div>
           <Animals
@@ -108,9 +114,8 @@ import { Animal, EventHandler } from '../../types';
             unfavoriteAnimals={unfavoriteAnimals}
           />
         </Route>
-      </Switch>
     </div>
   );
 }
 
-export default App;
+export default App

@@ -1,5 +1,6 @@
 type Animal = {
   id: number;
+  favorited: boolen;
   primary_photo_cropped: {
     full: string,
     large: string,
