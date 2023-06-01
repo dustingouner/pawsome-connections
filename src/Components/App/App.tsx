@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 import Form from '../Form/Form';
 import Animals from '../Animals/Animals';
 import AnimalDetails from '../AnimalDetails/AnimalDetails'
-import { getAnimals, getLocation, getType } from '../../Api-Calls';
+import { getAnimals, getAnimalSelected} from '../../Api-Calls';
 import {useState, useEffect} from 'react'
 import { Route, Switch } from 'react-router-dom';
 import { Animal, EventHandler } from '../../types';
@@ -16,50 +16,31 @@ import { Animal, EventHandler } from '../../types';
     const [favorites, setFavorites] = useState<Animal[]>([]);
     const [button, setButton] = useState<string>('Show Favorites');
     const [animalType, setAnimal] = useState<string>('')
+    const [link, setLink] = useState<string>("favorites")
 
-    // useEffect(() => {
-    //   const fetchData = async () => {
-    //     try {
-    //       let data;
-          
-    //       if(location !== "") {
-    //         data = await getLocation(location)
-    //       } else {
-    //         data = await getAnimals()
-    //         console.log(data, "data")
-    //       }
-        
-    //       setAnimals(data.animals);
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          let data;
 
-    //       } catch (error) {
-    //         setError(error);
-    //       }
-    //   };
-  
-    //   fetchData();
-    // }, [location]);
+          if (
+            (animalType !== "all" ||
+            location !== "")
+          ) {
+            data = await getAnimalSelected(location, animalType);
+          } else if(animalType === 'all') {
+            data = await getAnimals();
+            console.log(data, "data");
+          }
 
+          setAnimals(data.animals);
+        } catch (error) {
+          setError(error);
+        }
+      };
 
-     useEffect(() => {
-       const fetchData = async () => {
-         try {
-           let data;
-           if (animalType !== "all") {
-             data = await getType(animalType);
-           } else if (location !== "") {
-             data = await getLocation(location);
-           } else {
-             data = await getAnimals();
-           }
-           setAnimals(data.animals);
-         } catch (error) {
-           setError(error);
-         }
-       };
-
-       fetchData();
-     }, [animalType, location]);
-
+      fetchData();
+    }, [location, animalType]);
 
     const favoriteAnimals:Function = (id:number) => {
       const findAnimal: Animal | undefined = animals.find(animal => animal.id === id);
@@ -89,17 +70,43 @@ import { Animal, EventHandler } from '../../types';
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/:id" component  ={AnimalDetails}>
-          <Header />
-          <AnimalDetails animals={animals}/>
-        </Route>
-        <Route exact path="/"> 
+        <Route exact path={link}>
           <Header />
           <div className="submission-container">
-          <button id="showFavorites" className='show-favorites-btn' onClick={event => displayFavorites(event)}>{button}</button>
-          <Form setLocation={setLocation} setAnimal={setAnimal} />
+            <button
+              id="showFavorites"
+              className="show-favorites-btn"
+              onClick={(event) => displayFavorites(event)}>
+              {button}
+            </button>
           </div>
-          <Animals animals={animals} favoriteAnimals={favoriteAnimals} unfavoriteAnimals={unfavoriteAnimals}/>
+          <Animals
+            animals={animals}
+            favoriteAnimals={favoriteAnimals}
+            unfavoriteAnimals={unfavoriteAnimals}
+          />
+        </Route>
+        <Route exact path="/:id" component={AnimalDetails}>
+          <Header />
+          <AnimalDetails animals={animals} />
+        </Route>
+        <Route exact path="/">
+          <Header />
+          <div className="submission-container">
+            <button
+              id="showFavorites"
+              className="show-favorites-btn"
+              onClick={(event) => displayFavorites(event)}
+            >
+              {button}
+            </button>
+            <Form setLocation={setLocation} setAnimal={setAnimal} />
+          </div>
+          <Animals
+            animals={animals}
+            favoriteAnimals={favoriteAnimals}
+            unfavoriteAnimals={unfavoriteAnimals}
+          />
         </Route>
       </Switch>
     </div>
