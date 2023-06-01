@@ -6,15 +6,14 @@ import Animals from '../Animals/Animals';
 import AnimalDetails from '../AnimalDetails/AnimalDetails'
 import { getAnimals, getAnimalSelected} from '../../Api-Calls';
 import {useState, useEffect} from 'react'
-import { Route, Switch, Link, useLocation } from 'react-router-dom';
-import { Animal, EventHandler } from '../../types';
+import { Route, Link, useLocation } from 'react-router-dom';
+import { Animal } from '../../types';
 
   function App() {
     const [animals, setAnimals] = useState<Animal[]>([]);
     const [error, setError] = useState<any>('');
     const [location, setLocation] = useState<string>('');
     const [favorites, setFavorites] = useState<Animal[]>([]);
-    const [button, setButton] = useState<string>('Show Favorites');
     const [animalType, setAnimal] = useState<string>('')
     const [link, setLink] = useState<string>("favorites")
     const url:string = useLocation().pathname
@@ -57,13 +56,11 @@ import { Animal, EventHandler } from '../../types';
 
     const displayFavorites: Function = () => {
       if(url === "/") {
-        setButton("Show All")
         setLink("/")
         console.log(favorites, "favorites line 64")
         console.log(link, "link line 65")
         console.log(url)
       } else if(url === "/favorites") {
-        setButton("Show Favorites")
         setLink("/favorites")
         console.log(link, "link 70")
         console.log(animals, "animals")
@@ -80,7 +77,7 @@ import { Animal, EventHandler } from '../../types';
                 className="show-favorites-btn"
                 onClick={(event) => displayFavorites(event)}
               >
-                {button}
+              Show All
               </button>
             </Link>
           </div>
@@ -103,7 +100,7 @@ import { Animal, EventHandler } from '../../types';
                 className="show-favorites-btn"
                 onClick={(event) => displayFavorites(event)}
               >
-                {button}
+                Show Favorites
               </button>
             </Link>
             <Form setLocation={setLocation} setAnimal={setAnimal} />

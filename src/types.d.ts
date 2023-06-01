@@ -48,6 +48,4 @@ type Animal = {
   ]
 };
 
-// type Function = Function;
-
 export { Animal, EventHandler };
