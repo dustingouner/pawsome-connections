@@ -27,7 +27,6 @@ const Form:React.FC<FormProps> = (props:FormProps) => {
         <option value="all">All Pets</option>
         <option value="dog">Dog</option>
         <option value="cat">Cat</option>
-        <option value="other">Other Pet's</option>
       </select>
       <div>
         <label htmlFor="location">Find Pets by Zip Code:</label>
