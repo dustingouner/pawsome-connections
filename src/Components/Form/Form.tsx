@@ -4,6 +4,10 @@ import './Form.css'
 
 interface FormProps {
   setLocation: React.Dispatch<React.SetStateAction<string>>;
+  setAnimal: React.Dispatch<React.SetStateAction<string>>;
+  // setLocation: React.Dispatch<
+  //   React.SetStateAction<{ animalType: string; zipCode: string }>
+  // >;
 }
 
 const Form:React.FC<FormProps> = (props:FormProps) => {
@@ -13,16 +17,16 @@ const Form:React.FC<FormProps> = (props:FormProps) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     props.setLocation(zipCode)
-    console.log(props, "props")
-    console.log(props, "location")
+    props.setAnimal(animalType)
+    console.log(animalType, "ANIMAL TYPE")
   }
 
   return (
     <form className='form-section' onSubmit={event => handleSubmit(event)}>
-      <select id="animalTypeSelected">
-        <option>Dog</option>
-        <option>Cat</option>
-        <option>Other</option>
+      <select id="animalTypeSelected" defaultValue="all" onChange={event => setAnimalType(event.target.value)}>
+        <option value="all">All Pets</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
       </select>
       <div>
         <label htmlFor="location">Find Pets by Zip Code:</label>

@@ -12,8 +12,8 @@ interface AnimalProps {
 
 const Animals:React.FC<AnimalProps> = (props:AnimalProps) => {
   const { animals, favoriteAnimals, unfavoriteAnimals } = props
-
-  if (animals.length === 0) {
+  if (!animals) {
+    console.log(animals, "animals line 16")
     return <p>Please hang tight while we find your perfect pet...</p>; 
   }
 
