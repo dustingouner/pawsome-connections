@@ -5,11 +5,13 @@ import { Animal } from '../../types';
 import { Link } from 'react-router-dom'
 
 interface AnimalProps {
-  animals: Animal[]
+  animals: Animal[],
+  favoriteAnimals: Function,
+  unfavoriteAnimals: Function,
 }
 
 const Animals:React.FC<AnimalProps> = (props:AnimalProps) => {
-  const { animals } = props
+  const { animals, favoriteAnimals, unfavoriteAnimals } = props
 
   if (animals.length === 0) {
     return <p>Please hang tight while we find your perfect pet...</p>; 
@@ -20,7 +22,9 @@ const Animals:React.FC<AnimalProps> = (props:AnimalProps) => {
       {animals.map(animal => (
 
         <Link key={animal.id} to={`/${animal.id}`} style={{ textDecoration: 'none' }} > 
-        <AnimalCard 
+        <AnimalCard
+        favoriteAnimals={favoriteAnimals}
+        unfavoriteAnimals={unfavoriteAnimals}
         key={animal.id}
         animalDetails={animal} />
         </Link>
