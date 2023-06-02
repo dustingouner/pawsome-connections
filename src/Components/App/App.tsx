@@ -57,10 +57,10 @@ import ShowError from '../Error/Error';
     };
 
     if(error) {
-      return(
-        <p>{error}</p>
-      )
-    }
+      return <p>{error.message}</p>
+    } else {
+    
+    
 
   return (
   
@@ -116,6 +116,7 @@ import ShowError from '../Error/Error';
       </Switch>
     </div>
   );
+}
 }
 
 export default App
