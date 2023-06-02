@@ -4,9 +4,6 @@ import './Form.css'
 interface FormProps {
   setLocation: React.Dispatch<React.SetStateAction<string>>;
   setAnimal: React.Dispatch<React.SetStateAction<string>>;
-  // setLocation: React.Dispatch<
-  //   React.SetStateAction<{ animalType: string; zipCode: string }>
-  // >;
 }
 
 const Form:React.FC<FormProps> = (props:FormProps) => {
@@ -17,13 +14,13 @@ const Form:React.FC<FormProps> = (props:FormProps) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
+
     if(zipCode.length !== 5) {
       return setZipCodeError("Zip code should be 5 characters long.")
     }
       setZipCodeError('')
       props.setLocation(zipCode)
       props.setAnimal(animalType)
-      console.log(animalType, "ANIMAL TYPE")
   }
 
   return (
@@ -34,9 +31,10 @@ const Form:React.FC<FormProps> = (props:FormProps) => {
         <option value="cat">Cat</option>
       </select>
       <div>
-        <label htmlFor="location">Find Pets by Zip Code:</label>
+        <label htmlFor="location">Find Pets by Zip Code:  </label>
         <input id="locationInput" name="location" type="number" placeholder="Input Zip Code" onChange={event => setZipCode(event.target.value)}></input>
       </div>
+
         {zipCodeError && <p className='zipcode-error'>{zipCodeError}</p>}
       <input type="submit"/>
     </form>
