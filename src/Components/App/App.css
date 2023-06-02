@@ -8,7 +8,6 @@
 
 html, body {
   height: 100vh;
-  
 }
 
 .submission-container {
@@ -22,3 +21,12 @@ html, body {
   display: flex;
   height: 40%;
 }
+
+button:hover {
+  cursor: pointer;
+}
+
+select:hover {
+  cursor: pointer;
+}
+

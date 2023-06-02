@@ -5,7 +5,7 @@ import Form from '../Form/Form';
 import Animals from '../Animals/Animals';
 import AnimalDetails from '../AnimalDetails/AnimalDetails'
 import { getAnimals, getAnimalSelected} from '../../Api-Calls';
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import { Route, Link, useLocation } from 'react-router-dom';
 import { Animal } from '../../types';
 
@@ -14,25 +14,20 @@ import { Animal } from '../../types';
     const [error, setError] = useState<any>('');
     const [location, setLocation] = useState<string>('');
     const [favorites, setFavorites] = useState<Animal[]>([]);
-    const [animalType, setAnimal] = useState<string>('')
-    const [link, setLink] = useState<string>("favorites")
-    const url:string = useLocation().pathname
+    const [animalType, setAnimal] = useState<string>('');
+    const [link, setLink] = useState<string>("favorites");
+    const url:string = useLocation().pathname;
 
     useEffect(() => {
       const fetchData = async () => {
         try {
           let data;
 
-          if (
-            (animalType !== "all" ||
-            location !== "")
-          ) {
+          if ((animalType !== "all" || location !== "")) {
             data = await getAnimalSelected(location, animalType);
           } else if(animalType === 'all') {
             data = await getAnimals();
-            console.log(data, "data");
           }
-
           setAnimals(data.animals);
         } catch (error) {
           setError(error);
@@ -44,28 +39,22 @@ import { Animal } from '../../types';
 
     const favoriteAnimals:Function = (animal:Animal) => {
       setFavorites([...favorites, animal])
-      console.log(favorites)
-      console.log(animal)
-    }
+    };
 
     const unfavoriteAnimals: Function = (id:number) => {
-      const favoriteAnimals: Animal[] = favorites.filter(animal => animal.id !== id)
+      const favoriteAnimals: Animal[] = favorites.filter(animal => animal.id !== id);
 
-      setFavorites(favoriteAnimals)
-    }
+      setFavorites(favoriteAnimals);
+    };
 
     const displayFavorites: Function = () => {
       if(url === "/") {
-        setLink("/")
-        console.log(favorites, "favorites line 64")
-        console.log(link, "link line 65")
-        console.log(url)
+        setLink("/favorites");
       } else if(url === "/favorites") {
-        setLink("/favorites")
-        console.log(link, "link 70")
-        console.log(animals, "animals")
-      }
-    }
+        setLink("/");
+      };
+    };
+
   return (
     <div className="App">
         <Route exact path="/favorites">
@@ -77,7 +66,7 @@ import { Animal } from '../../types';
                 className="show-favorites-btn"
                 onClick={(event) => displayFavorites(event)}
               >
-              Show All
+                Show All Pets
               </button>
             </Link>
           </div>
@@ -100,7 +89,7 @@ import { Animal } from '../../types';
                 className="show-favorites-btn"
                 onClick={(event) => displayFavorites(event)}
               >
-                Show Favorites
+                Show Favorite Pets
               </button>
             </Link>
             <Form setLocation={setLocation} setAnimal={setAnimal} />

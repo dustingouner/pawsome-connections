@@ -8,10 +8,10 @@ interface AnimalProps {
 }
 
 const AnimalDetails:React.FC<AnimalProps> = (props:AnimalProps) => {
-  const { animals } = props
-  const { id } = useParams<{id: string }>()
+  const { animals } = props;
+  const { id } = useParams<{id: string }>();
 
-  const selectedAnimal = animals.find(animal => animal.id === Number(id))
+  const selectedAnimal = animals.find(animal => animal.id === Number(id));
 
   if (!selectedAnimal) {
     return <p>We're sorry, we could not locate this pet.</p>
@@ -21,9 +21,7 @@ const AnimalDetails:React.FC<AnimalProps> = (props:AnimalProps) => {
   const imgSrc = primary_photo_cropped?.full
   const fallBackImage = require('../../assets/pawsome.png')
   const morePhotos = photos
-  console.log('morephotos', morePhotos)
-  console.log('petDetails', animals)
-  console.log('description', description)
+
   return (
     <div className="animal-details-container">
         <h1 className="pet-name">{name}</h1> 

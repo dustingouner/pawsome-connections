@@ -5,6 +5,8 @@
   height: 5em;
   background-color: rgb(222, 222, 222);
   width: 50vw
-  /* margin-bottom: 2em; */
 }
 
+.submit {
+  cursor: pointer;
+}

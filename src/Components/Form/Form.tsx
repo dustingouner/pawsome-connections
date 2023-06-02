@@ -5,9 +5,6 @@ import './Form.css'
 interface FormProps {
   setLocation: React.Dispatch<React.SetStateAction<string>>;
   setAnimal: React.Dispatch<React.SetStateAction<string>>;
-  // setLocation: React.Dispatch<
-  //   React.SetStateAction<{ animalType: string; zipCode: string }>
-  // >;
 }
 
 const Form:React.FC<FormProps> = (props:FormProps) => {
@@ -18,7 +15,6 @@ const Form:React.FC<FormProps> = (props:FormProps) => {
     event.preventDefault()
     props.setLocation(zipCode)
     props.setAnimal(animalType)
-    console.log(animalType, "ANIMAL TYPE")
   }
 
   return (
@@ -29,10 +25,10 @@ const Form:React.FC<FormProps> = (props:FormProps) => {
         <option value="cat">Cat</option>
       </select>
       <div>
-        <label htmlFor="location">Find Pets by Zip Code:</label>
+        <label htmlFor="location">Find Pets by Zip Code:  </label>
         <input id="locationInput" name="location" type="number" placeholder="Input Zip Code" onChange={event => setZipCode(event.target.value)}></input>
       </div>
-      <input type="submit"/>
+      <input className="submit" type="submit"/>
     </form>
   )
 
