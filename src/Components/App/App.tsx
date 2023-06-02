@@ -6,7 +6,7 @@ import Animals from '../Animals/Animals';
 import AnimalDetails from '../AnimalDetails/AnimalDetails'
 import { getAnimals, getAnimalSelected} from '../../Api-Calls';
 import { useState, useEffect } from 'react'
-import { Route, Link, useLocation } from 'react-router-dom';
+import { Route, Link, useLocation, Switch } from 'react-router-dom';
 import { Animal } from '../../types';
 import ShowError from '../Error/Error';
 
@@ -56,10 +56,19 @@ import ShowError from '../Error/Error';
       };
     };
 
+    if(error) {
+      return(
+        <p>{error}</p>
+      )
+    }
+
   return (
+  
     <div className="App">
+      <Header />
+      <Switch >
         <Route exact path="/favorites">
-          <Header />
+          {/* <Header /> */}
           <div className="submission-container">
             <Link to="/">
               <button
@@ -78,11 +87,11 @@ import ShowError from '../Error/Error';
           />
         </Route>
         <Route exact path="/animal/:id">
-          <Header />
+          {/* <Header /> */}
           <AnimalDetails animals={animals} />
         </Route>
         <Route exact path="/">
-          <Header />
+          {/* <Header /> */}
           <div className="submission-container">
             <Link to={link}>
               <button
@@ -101,10 +110,10 @@ import ShowError from '../Error/Error';
             unfavoriteAnimals={unfavoriteAnimals}
           />
         </Route>
-        <Route path='*' component={ShowError}>
-
+        <Route path='*' render={() => <ShowError />}>
 
         </Route>
+      </Switch>
     </div>
   );
 }

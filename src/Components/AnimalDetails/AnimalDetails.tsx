@@ -14,7 +14,7 @@ const AnimalDetails:React.FC<AnimalProps> = (props:AnimalProps) => {
   const selectedAnimal = animals.find(animal => animal.id === Number(id));
 
   if (!selectedAnimal) {
-    return <p></p>
+    return <p>Sorry, we cannot locate this pet!</p>
   }
 
   const { primary_photo_cropped, age, status, breeds, contact, description, gender, name, size, type, attributes, photos} = selectedAnimal
