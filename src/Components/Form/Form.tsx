@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react"
 import './Form.css'
 
 interface FormProps {
@@ -13,12 +12,18 @@ interface FormProps {
 const Form:React.FC<FormProps> = (props:FormProps) => {
   const [animalType, setAnimalType] = useState('')
   const [zipCode, setZipCode] = useState("")
+  const [zipCodeError, setZipCodeError] = useState('')
   
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    props.setLocation(zipCode)
-    props.setAnimal(animalType)
-    console.log(animalType, "ANIMAL TYPE")
+
+    if(zipCode.length !== 5) {
+      return setZipCodeError("Zip code should be 5 characters long.")
+    }
+      setZipCodeError('')
+      props.setLocation(zipCode)
+      props.setAnimal(animalType)
+      console.log(animalType, "ANIMAL TYPE")
   }
 
   return (
@@ -32,6 +37,7 @@ const Form:React.FC<FormProps> = (props:FormProps) => {
         <label htmlFor="location">Find Pets by Zip Code:</label>
         <input id="locationInput" name="location" type="number" placeholder="Input Zip Code" onChange={event => setZipCode(event.target.value)}></input>
       </div>
+        {zipCodeError && <p className='zipcode-error'>{zipCodeError}</p>}
       <input type="submit"/>
     </form>
   )
