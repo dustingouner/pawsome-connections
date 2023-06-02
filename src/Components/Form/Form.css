@@ -7,6 +7,12 @@
   width: 50vw
 }
 
+
 .submit {
   cursor: pointer;
 }
+
+.zipcode-error {
+  color: red;
+}
+
