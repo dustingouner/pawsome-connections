@@ -25,7 +25,7 @@ const getAnimals = () => {
 }
 
 const getAnimalSelected = (location: string, type: string) => {
-  let url = "https://api.petfinder.com/v2/animals?age=senio";
+  let url = "https://api.petfinder.com/v2/animals?age=senior";
 
   if (location) {
     url += `&location=${location}`;

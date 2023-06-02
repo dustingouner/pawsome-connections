@@ -57,7 +57,14 @@ import ShowError from '../Error/Error';
     };
 
     if(error) {
-      return <p>{error.message}</p>
+      return (
+        <div>
+          <Header />
+       <p>{error.message}</p>
+      </div>
+
+      )
+        
     } else {
     
     
