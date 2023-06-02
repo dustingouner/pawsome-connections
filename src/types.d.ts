@@ -1,5 +1,6 @@
 type Animal = {
   id: number;
+  favorited: boolen;
   primary_photo_cropped: {
     full: string,
     large: string,
@@ -46,7 +47,5 @@ type Animal = {
   }
   ]
 };
-
-// type Function = Function;
 
 export { Animal, EventHandler };

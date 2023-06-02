@@ -5,7 +5,7 @@ const getAnimals = () => {
     method: "GET",
     headers: {
       Authorization:
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjdjODkwNDAwMjgxY2QxMGNmMjQ5YzA2ZDEwYjcwMWYyODk5MDc0YjdlMWM4MjYxMWExZGNjMTQ1M2I2M2I5OWVjZWVlYjM3NWI1YTg5ZDE5IiwiaWF0IjoxNjg1NjUwMjc4LCJuYmYiOjE2ODU2NTAyNzgsImV4cCI6MTY4NTY1Mzg3OCwic3ViIjoiIiwic2NvcGVzIjpbXX0.VaupLZsq2MQR8K8zvLMf7nmWor6cEWcSiCam-wC1qTglNbXjXhmk8Pe4AtRt2Zh74rfwl9hwDmk7MdNfcGntgzbZUgglLOo-PELGapzmwVhLS5SD4CQmBkg91DPgh3c1sDo7epsLmuA6NV2dPn9fxgr8kmj-Tlnm0lOQIZUBmHcFYyDpVyh-RBBvd3LQbFpIdmsEvzmsNAIl9lzMjCMS4VRylkQX5agVRTWjPPt9bMpDdlDzUy8f3Mrilg-g8PzVP7HI7U6IqMXT78JobuawnqtzrNBlNVUFKjN51WaUb-SHa_BEVKGjAhpT_DqTb55fhDzAntLsovxzAK5d1aPOGg",
+        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjNjZjVlNTBlMDAzODgxMDcyMDg4M2VlZDI2Nzc1ZjA0YWM0ZjNiYzk5NTg3MDRiODllNDBkY2EyOTdmZjQ2MDBmYmMwZDlhZjI2NTA4NWU1IiwiaWF0IjoxNjg1NjYyMDI2LCJuYmYiOjE2ODU2NjIwMjYsImV4cCI6MTY4NTY2NTYyNiwic3ViIjoiIiwic2NvcGVzIjpbXX0.CerrEvO3b8x3TQz-i-fbgmp8YU3J_Ivs_Y85d8LR3oDuU_V5eG0oF-j8N_h8nvDXofaFJlXXiC2RGHmk9jPQtwL_MWUW1LIYWWeGPxxMiq-O3M5qfE87yX-BF4SK1KSa9bJ089gijAevOSwHkqW8MHOWp8NnY22hFjYXxEbbU-_X-qS132wyO3c7a_x1Uz51iSwlmBY6FGxF002LN7QUGdPhaDtweEh7bSG-Swwwn8HRGpWKmhtd8yWkzT9QbxW-hDVYXSvrRCQYuvdA9J1IDJTLsAQCDZlCPUu4ygPICkjaaeX8Fk-K4XSZydveXgjnAzmZzp_UGb2QOWx4WKItfg",
     },
   }).then((response) => response.json());
 }
@@ -25,7 +25,7 @@ const getAnimalSelected = (location: string, type: string) => {
     method: "GET",
     headers: {
       Authorization:
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjdjODkwNDAwMjgxY2QxMGNmMjQ5YzA2ZDEwYjcwMWYyODk5MDc0YjdlMWM4MjYxMWExZGNjMTQ1M2I2M2I5OWVjZWVlYjM3NWI1YTg5ZDE5IiwiaWF0IjoxNjg1NjUwMjc4LCJuYmYiOjE2ODU2NTAyNzgsImV4cCI6MTY4NTY1Mzg3OCwic3ViIjoiIiwic2NvcGVzIjpbXX0.VaupLZsq2MQR8K8zvLMf7nmWor6cEWcSiCam-wC1qTglNbXjXhmk8Pe4AtRt2Zh74rfwl9hwDmk7MdNfcGntgzbZUgglLOo-PELGapzmwVhLS5SD4CQmBkg91DPgh3c1sDo7epsLmuA6NV2dPn9fxgr8kmj-Tlnm0lOQIZUBmHcFYyDpVyh-RBBvd3LQbFpIdmsEvzmsNAIl9lzMjCMS4VRylkQX5agVRTWjPPt9bMpDdlDzUy8f3Mrilg-g8PzVP7HI7U6IqMXT78JobuawnqtzrNBlNVUFKjN51WaUb-SHa_BEVKGjAhpT_DqTb55fhDzAntLsovxzAK5d1aPOGg",
+        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjNjZjVlNTBlMDAzODgxMDcyMDg4M2VlZDI2Nzc1ZjA0YWM0ZjNiYzk5NTg3MDRiODllNDBkY2EyOTdmZjQ2MDBmYmMwZDlhZjI2NTA4NWU1IiwiaWF0IjoxNjg1NjYyMDI2LCJuYmYiOjE2ODU2NjIwMjYsImV4cCI6MTY4NTY2NTYyNiwic3ViIjoiIiwic2NvcGVzIjpbXX0.CerrEvO3b8x3TQz-i-fbgmp8YU3J_Ivs_Y85d8LR3oDuU_V5eG0oF-j8N_h8nvDXofaFJlXXiC2RGHmk9jPQtwL_MWUW1LIYWWeGPxxMiq-O3M5qfE87yX-BF4SK1KSa9bJ089gijAevOSwHkqW8MHOWp8NnY22hFjYXxEbbU-_X-qS132wyO3c7a_x1Uz51iSwlmBY6FGxF002LN7QUGdPhaDtweEh7bSG-Swwwn8HRGpWKmhtd8yWkzT9QbxW-hDVYXSvrRCQYuvdA9J1IDJTLsAQCDZlCPUu4ygPICkjaaeX8Fk-K4XSZydveXgjnAzmZzp_UGb2QOWx4WKItfg",
     },
   })
     .then((response) => response.json())
@@ -34,35 +34,5 @@ const getAnimalSelected = (location: string, type: string) => {
       throw error;
     });
 };
-
-// const getLocation = (zipCode:string) => {
-//   console.log("this is fetching!")
-//   // const zipcodeFetch = `https://api.petfinder.com/v2/animals?age=senior&location=${zipCode}`
-//   return fetch(
-//     `https://api.petfinder.com/v2/animals?age=senior&location=${zipCode}`,
-//     {
-//       method: "GET",
-//       headers: {
-//         Authorization:
-//           "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjhhYjU5ZjBhODc5YzJlNDJhNGUxM2I2NWY2N2RlNTJkYzFkOWVjOGI5NWNmNTk0YTg1YjU0NGQ5ZWZiMzNmNzg2M2JlMGU3YTFkZGMwNWU3IiwiaWF0IjoxNjg1NjI1NTQ1LCJuYmYiOjE2ODU2MjU1NDUsImV4cCI6MTY4NTYyOTE0NSwic3ViIjoiIiwic2NvcGVzIjpbXX0.JCGXQ4Uq6NvmGO_Rw-ba59GOsBcplSRq53lazxx5DxbfQIhgiksTrUMTGT7f7A5FZpFb07B9lF9cKX0jqo5X-nplr5UPZFzMZpfKD2VUXy1jbuf-i72JrXNsIJzekqaV6U9PaKBbkQbMdO6GJs-ap0rd0WsoEqmungFdsfXC19cJVN8L5GbzBwSOxNZyMa5wmRuXVNoAJ7-_jwwiuNi6q9uHkKDd3gPFv3b0qrQhaRbkdEkpFH8beKaOt4WDdmq6Darlf76Ryd9u-UdjpQHDY9jJROVOPhkZgkfnUYWrHZCd62Ziq_MEXAgA8ROdLT5RYgHpw-B6a_D58iU5DTH7Vg",
-//       },
-//     }
-//   ).then((response) => response.json());
-// }
-
-// const getType = (animalType: string) => {
-//   // console.log(animalType, "Animaltype line 29");
-//   // const zipcodeFetch = `https://api.petfinder.com/v2/animals?age=senior&location=${zipCode}`
-//   return fetch(
-//     `https://api.petfinder.com/v2/animals?age=senior&types/${animalType}`,
-//     {
-//       method: "GET",
-//       headers: {
-//         Authorization:
-//           "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjhhYjU5ZjBhODc5YzJlNDJhNGUxM2I2NWY2N2RlNTJkYzFkOWVjOGI5NWNmNTk0YTg1YjU0NGQ5ZWZiMzNmNzg2M2JlMGU3YTFkZGMwNWU3IiwiaWF0IjoxNjg1NjI1NTQ1LCJuYmYiOjE2ODU2MjU1NDUsImV4cCI6MTY4NTYyOTE0NSwic3ViIjoiIiwic2NvcGVzIjpbXX0.JCGXQ4Uq6NvmGO_Rw-ba59GOsBcplSRq53lazxx5DxbfQIhgiksTrUMTGT7f7A5FZpFb07B9lF9cKX0jqo5X-nplr5UPZFzMZpfKD2VUXy1jbuf-i72JrXNsIJzekqaV6U9PaKBbkQbMdO6GJs-ap0rd0WsoEqmungFdsfXC19cJVN8L5GbzBwSOxNZyMa5wmRuXVNoAJ7-_jwwiuNi6q9uHkKDd3gPFv3b0qrQhaRbkdEkpFH8beKaOt4WDdmq6Darlf76Ryd9u-UdjpQHDY9jJROVOPhkZgkfnUYWrHZCd62Ziq_MEXAgA8ROdLT5RYgHpw-B6a_D58iU5DTH7Vg",
-//       },
-//     }
-//   ).then((response) => response.json());
-// };
 
 export { getAnimals, getAnimalSelected };
