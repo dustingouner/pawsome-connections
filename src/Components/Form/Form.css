@@ -8,3 +8,6 @@
   /* margin-bottom: 2em; */
 }
 
+.zipcode-error {
+  color: red;
+}
