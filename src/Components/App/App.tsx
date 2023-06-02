@@ -8,6 +8,7 @@ import { getAnimals, getAnimalSelected} from '../../Api-Calls';
 import { useState, useEffect } from 'react'
 import { Route, Link, useLocation } from 'react-router-dom';
 import { Animal } from '../../types';
+import ShowError from '../Error/Error';
 
   function App() {
     const [animals, setAnimals] = useState<Animal[]>([]);
@@ -99,6 +100,10 @@ import { Animal } from '../../types';
             favoriteAnimals={favoriteAnimals}
             unfavoriteAnimals={unfavoriteAnimals}
           />
+        </Route>
+        <Route path='*' component={ShowError}>
+
+
         </Route>
     </div>
   );
