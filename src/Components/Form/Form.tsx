@@ -15,7 +15,7 @@ const Form:React.FC<FormProps> = (props:FormProps) => {
     event.preventDefault()
 
 
-    if(zipCode.length !== 5) {
+    if(zipCode.length > 0 && zipCode.length !== 5) {
       return setZipCodeError("Zip code should be 5 characters long.")
     }
       setZipCodeError('')

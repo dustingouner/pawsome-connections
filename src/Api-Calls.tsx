@@ -6,10 +6,22 @@ const getAnimals = () => {
     headers: {
       Authorization:
 
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjhmMjI4NTQ1NTI1ODAzNTJjYTI0MmExNTc3NjZmZWVlM2YzMWE2YzQwMDhlMGQ4MzE2ZDQzYWYzYTY2YTcyZGUwYzM4MzBmY2RiYmM4MzY1IiwiaWF0IjoxNjg1NzMxMjU2LCJuYmYiOjE2ODU3MzEyNTYsImV4cCI6MTY4NTczNDg1Niwic3ViIjoiIiwic2NvcGVzIjpbXX0.wFpbyUDv1a9luupohwNiktfiTyKy_ZcdaRL5U1tdNjw2g7PMMj6YDLn1t1plD-TayG7_KKj0rNtoZZc38IDmpvZWbwPb6HE6PEWSdf-yIEsZZiA1fGOJbHT3rZoFu2Y3EF1hlM08OrRKJ43Foy-ohNQy6vD-OdDxwsMwpwSUH5-cKe6PGJPBrB5lQ9XXRiVjKpJG4HQv5eF4Excfay6P8bCh74wciMxbNXG2kk6oG2Zt77HoTSJy8tXyFonG7ZnoHXOLd6-dsI9sKDE9oJGsUhXdOR_UNvPoEdjuIo0mFiGvkRcETPMo95j290r8oJeEZHyBaVLvBUv20goACSd-IA",
+        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6ImJhM2JiNzExMGU5ZWRkNGFkNTVlNzBkMTlhODY0NzZkMDhhMmZiOGZlZjUyNWQ4MmZkY2VhYzY3ZDA4Y2FhMzA4ODA5YTk4ZTcxY2Q5N2I5IiwiaWF0IjoxNjg1NzQyNjI1LCJuYmYiOjE2ODU3NDI2MjUsImV4cCI6MTY4NTc0NjIyNSwic3ViIjoiIiwic2NvcGVzIjpbXX0.tA9Re3zdRHcekSqDNrBPdSj5Y5v10N1-xy3_O7w8oMYrBgzCh2GNlqaX91Nsrm5gnJHDd95AA9e2kbsCWyFZRK8EKEXbtoU04o5RZMn0Oy5H0iOmDmPzoOkaT8g50XALE0ig05Lz2cTbL4ZMRpuJq7zK1rFAs51_wd_r5PbsXfHEJ3jGRwR0EIbDM20RbocZrkruFfM5zCLg66SjUR80WsrJbDmfj-BOE-OgHJ75z1Ep7HYi3T_jvgMdjDffVbyBe5NHOmJypFjMLG7cBDZTScAUob-jxeDlUBR3_XPoGk7hbuDoziXBrqy8mr-GeckItx90bOz76HnDt_mQ1P6dkQ",
 
     },
-  }).then((response) => response.json());
+  })
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error ("Failed to Fetch") 
+
+  } else {
+    return response.json()
+  }})
+
+  .catch((error) => {
+    console.error("Error fetching animals:", error);
+    throw error;
+  });
 }
 
 const getAnimalSelected = (location: string, type: string) => {
@@ -28,11 +40,18 @@ const getAnimalSelected = (location: string, type: string) => {
     headers: {
       Authorization:
 
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjhkZjcwNWRlZTQ3ZGQ2NzUzNzE1ZDMzZTE3ZmE0ZDU5OGViMTg1OGJlOWZhNWUyMDc1YTlhMDk1OTc1YzA2ZTExNjJhNzI2MWYwOWI1M2ZlIiwiaWF0IjoxNjg1NzIzNDE3LCJuYmYiOjE2ODU3MjM0MTcsImV4cCI6MTY4NTcyNzAxNywic3ViIjoiIiwic2NvcGVzIjpbXX0.Z07D-ZxgIJIDYpzt24fQQv4e2e94AP4_S1M0Z9XZ0aV7mZHUGSMLDnHrwz_vxQy-G4wPThe5gKjnmpn9Lago_yuPaa1E14iH6PIuycAtvJeTN5bjgZ3HH54y0k93vGFchDyLCMBK8jrf6uHKa31b1CtzVWtlGJ7mwfVLUDsdqbeyf4TT5nM9t2EN872pNJTDNPGHjiNLUgAMF_RKRTXH5wyC5x0N7VUYslibKzIMHmzC5y4mE827DvhgO7KnkN2ER8pineMQEPn2XppgFZwEtu2mJv1kS8LMFZ8octxZUZPT6LWGFbPJWzUbqxXO0e2lWQxg8NWrPntYdJlltpfyhQ",
+        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6ImJhM2JiNzExMGU5ZWRkNGFkNTVlNzBkMTlhODY0NzZkMDhhMmZiOGZlZjUyNWQ4MmZkY2VhYzY3ZDA4Y2FhMzA4ODA5YTk4ZTcxY2Q5N2I5IiwiaWF0IjoxNjg1NzQyNjI1LCJuYmYiOjE2ODU3NDI2MjUsImV4cCI6MTY4NTc0NjIyNSwic3ViIjoiIiwic2NvcGVzIjpbXX0.tA9Re3zdRHcekSqDNrBPdSj5Y5v10N1-xy3_O7w8oMYrBgzCh2GNlqaX91Nsrm5gnJHDd95AA9e2kbsCWyFZRK8EKEXbtoU04o5RZMn0Oy5H0iOmDmPzoOkaT8g50XALE0ig05Lz2cTbL4ZMRpuJq7zK1rFAs51_wd_r5PbsXfHEJ3jGRwR0EIbDM20RbocZrkruFfM5zCLg66SjUR80WsrJbDmfj-BOE-OgHJ75z1Ep7HYi3T_jvgMdjDffVbyBe5NHOmJypFjMLG7cBDZTScAUob-jxeDlUBR3_XPoGk7hbuDoziXBrqy8mr-GeckItx90bOz76HnDt_mQ1P6dkQ",
 
     },
   })
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error ("Failed to Fetch") 
+
+    } else {
+      return response.json()
+    }})
+  
     .catch((error) => {
       console.error("Error fetching animals:", error);
       throw error;
