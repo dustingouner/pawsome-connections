@@ -1,5 +1,5 @@
 
-describe("Home page", () => {
+describe("Animal Detail Page", () => {
   beforeEach(() => {
     cy.intercept('GET', "https://api.petfinder.com/v2/animals?age=senior", {
       fixture: 'animal.json'
