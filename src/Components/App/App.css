@@ -30,3 +30,7 @@ select:hover {
   cursor: pointer;
 }
 
+.error-message {
+  color: white;
+  font-size: xx-large;
+}
