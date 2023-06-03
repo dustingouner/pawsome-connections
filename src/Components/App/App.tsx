@@ -69,8 +69,8 @@ import ShowError from '../Error/Error';
     
     
 
+      console.log(animals)
   return (
-  
     <div className="App">
       <Header />
       <Switch >
