@@ -30,50 +30,46 @@ describe('Dashboard', () => {
     cy.get(".animals-container").find(".animal-card").should("have.length", 4)
   })
   it("should see a error in the case of a bad GET response", () => {
-    cy.intercept("GET", "https://api.petfinder.com/v2/animals?age=senirsed", {
-      fixture: "animalsData.json",
-    }).visit("http://localhost:3000/");
+    cy.intercept("https://api.petfinder.com/v2/animals?age=senior", {
+      statusCode: 404,
+    }).visit("http://localhost:3000");
+    cy.get(".header-section").get("p").should("have.text", "Failed to Fetch");
+  });
+  it("should allow a user to click on an animal card and navigate to the animals detail page", () => {
+    cy.get(".animal-card").first().click()
+    cy.url().should("include", "/animal/64841660")
   })
-  it("should show an error message when initial fetch request fails on page load", () => {
-      cy.intercept("https://api.petfinder.com/v2/animals?age=senior", {
-        statusCode: 404,
-      })
-        .visit("http://localhost:3000")
-        cy.get('.header-section')
-        .get('p')
-        .should("have.text", "Failed to Fetch");
-    });
 })
-// describe("Search Form", () => {
-//   beforeEach("search input", () => {
-//      cy.intercept("GET",'https://api.petfinder.com/v2/animals?age=senior', {
-//       fixture:'animalsData.json'
-//     })
-//     cy.intercept(
-//       "GET",
-//       "https://api.petfinder.com/v2/animals?age=senior&location=31601",
-//       {
-//         fixture: "animalsData.json",
-//       }
-//     );
-//     cy.visit("http://localhost:3000/");
-//   });
-//   it("should be able to input data in a form to search by zipcode", () => {
-//     cy.get("form")
-//       .get('input[name="location"]')
-//       .type("31601")
-//       .get('input[type="submit"]') 
-//       .click();
-//     cy.get(".animal-card")
-//       .first()
-//       .should("have.text", "🤍SadieSenior | Shih Tzu | Valdosta, GA");
-//   });
-//   it("should give an error message if there are no matching zipcodes", () => {
-//     cy.get("form")
-//       .get('input[name="location"]')
-//       .type("34")
-//       .get('input[type="submit"]')
-//       .click();
-//     cy.get(".zipcode-error").should("have.text", "Zip code should be 5 characters long.");
-//   })
-// });
+describe("Search Form", () => {
+  beforeEach("search input", () => {
+     cy.intercept("GET",'https://api.petfinder.com/v2/animals?age=senior', {
+      fixture:'animalsData.json'
+    })
+    cy.intercept(
+      "GET",
+      "https://api.petfinder.com/v2/animals?age=senior&location=31601",
+      {
+        fixture: "animalsData.json",
+      }
+    );
+    cy.visit("http://localhost:3000/");
+  });
+  it("should be able to input data in a form to search by zipcode", () => {
+    cy.get("form")
+      .get('input[name="location"]')
+      .type("31601")
+      .get('input[type="submit"]') 
+      .click();
+    cy.get(".animal-card")
+      .first()
+      .should("have.text", "🤍SadieSenior | Shih Tzu | Valdosta, GA");
+  });
+  it("should give an error message if there are no matching zipcodes", () => {
+    cy.get("form")
+      .get('input[name="location"]')
+      .type("34")
+      .get('input[type="submit"]')
+      .click();
+    cy.get(".zipcode-error").should("have.text", "Zip code should be 5 characters long.");
+  })
+});
