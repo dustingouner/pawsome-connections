@@ -35,7 +35,7 @@ const Form:React.FC<FormProps> = (props:FormProps) => {
         <input id="locationInput" name="location" type="number" placeholder="Input Zip Code" onChange={event => setZipCode(event.target.value)}></input>
       </div>
         {zipCodeError && <p className='zipcode-error'>{zipCodeError}</p>}
-      <input name="submitForm"type="submit"/>
+      <input id="submitForm" name="submitForm" type="submit"/>
     </form>
   )
 
