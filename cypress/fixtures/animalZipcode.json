@@ -1,0 +1,302 @@
+{
+  "animals": [
+   {
+     "id": 64851902,
+     "organization_id": "PA1005",
+     "url": "https://www.petfinder.com/dog/chloe-64851902/pa/bradfordwoods/senior-hearts-rescue-and-renewal-pa1005/?referrer_id=17d61713-743c-48de-9625-a94ac4d7758e",
+     "type": "Dog",
+     "species": "Dog",
+     "breeds": {
+       "primary": "Miniature Poodle",
+       "secondary": null,
+       "mixed": false,
+       "unknown": false
+     },
+     "colors": {
+       "primary": "Black",
+       "secondary": null,
+       "tertiary": null
+     },
+     "age": "Senior",
+     "gender": "Female",
+     "size": "Small",
+     "coat": "Curly",
+     "attributes": {
+       "spayed_neutered": true,
+       "house_trained": true,
+       "declawed": null,
+       "special_needs": true,
+       "shots_current": true
+     },
+     "environment": {
+       "children": null,
+       "dogs": true,
+       "cats": null
+     },
+     "tags": [],
+     "name": "Chloe",
+     "description": null,
+     "organization_animal_id": null,
+     "photos": [
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/2/?bust=1685913512&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/2/?bust=1685913512&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/2/?bust=1685913512&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/2/?bust=1685913512"
+       },
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/1/?bust=1685913512&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/1/?bust=1685913512&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/1/?bust=1685913512&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/1/?bust=1685913512"
+       },
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/3/?bust=1685913513&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/3/?bust=1685913513&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/3/?bust=1685913513&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/3/?bust=1685913513"
+       },
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/4/?bust=1685913514&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/4/?bust=1685913514&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/4/?bust=1685913514&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/4/?bust=1685913514"
+       }
+     ],
+     "primary_photo_cropped": {
+       "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/2/?bust=1685913512&width=300",
+       "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/2/?bust=1685913512&width=450",
+       "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/2/?bust=1685913512&width=600",
+       "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851902/2/?bust=1685913512"
+     },
+     "videos": [],
+     "status": "adoptable",
+     "status_changed_at": "2023-06-04T21:47:46+0000",
+     "published_at": "2023-06-04T21:47:45+0000",
+     "distance": null,
+     "contact": {
+       "email": "adopt@seniorhearts.org",
+       "phone": "(412) 478-1529",
+       "address": {
+         "address1": null,
+         "address2": null,
+         "city": "Seattle",
+         "state": "WA",
+         "postcode": "98258",
+         "country": "US"
+       }
+     },
+     "_links": {
+       "self": {
+         "href": "/v2/animals/64851902"
+       },
+       "type": {
+         "href": "/v2/types/dog"
+       },
+       "organization": {
+         "href": "/v2/organizations/pa1005"
+       }
+     }
+   }, {
+     "id": 64851955,
+     "organization_id": "MA576",
+     "url": "https://www.petfinder.com/dog/gunner-64851955/ma/stoughton/happy-life-beagle-rescue-inc-ma576/?referrer_id=17d61713-743c-48de-9625-a94ac4d7758e",
+     "type": "Dog",
+     "species": "Dog",
+     "breeds": {
+       "primary": "Beagle",
+       "secondary": null,
+       "mixed": false,
+       "unknown": false
+     },
+     "colors": {
+       "primary": "Tricolor (Brown, Black, & White)",
+       "secondary": null,
+       "tertiary": null
+     },
+     "age": "Senior",
+     "gender": "Male",
+     "size": "Medium",
+     "coat": "Short",
+     "attributes": {
+       "spayed_neutered": true,
+       "house_trained": false,
+       "declawed": null,
+       "special_needs": false,
+       "shots_current": true
+     },
+     "environment": {
+       "children": null,
+       "dogs": true,
+       "cats": null
+     },
+     "tags": [],
+     "name": "Gunner",
+     "description": "Gunner is a friendly, laidback beagle. His favorite things are gingersnaps, carrots and riding in the car. He’s a sweet...",
+     "organization_animal_id": null,
+     "photos": [
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/6/?bust=1685914204&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/6/?bust=1685914204&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/6/?bust=1685914204&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/6/?bust=1685914204"
+       },
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/1/?bust=1685914200&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/1/?bust=1685914200&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/1/?bust=1685914200&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/1/?bust=1685914200"
+       },
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/2/?bust=1685914201&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/2/?bust=1685914201&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/2/?bust=1685914201&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/2/?bust=1685914201"
+       },
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/3/?bust=1685914202&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/3/?bust=1685914202&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/3/?bust=1685914202&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/3/?bust=1685914202"
+       },
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/4/?bust=1685914203&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/4/?bust=1685914203&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/4/?bust=1685914203&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/4/?bust=1685914203"
+       },
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/5/?bust=1685914204&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/5/?bust=1685914204&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/5/?bust=1685914204&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/5/?bust=1685914204"
+       }
+     ],
+     "primary_photo_cropped": {
+       "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/6/?bust=1685914204&width=300",
+       "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/6/?bust=1685914204&width=450",
+       "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/6/?bust=1685914204&width=600",
+       "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851955/6/?bust=1685914204"
+     },
+     "videos": [],
+     "status": "adoptable",
+     "status_changed_at": "2023-06-04T21:30:08+0000",
+     "published_at": "2023-06-04T21:30:06+0000",
+     "distance": null,
+     "contact": {
+       "email": "info@happylifebeaglerescue.org",
+       "phone": null,
+       "address": {
+         "address1": null,
+         "address2": null,
+         "city": "Seattle",
+         "state": "WA",
+         "postcode": "98258",
+         "country": "US"
+       }
+     },
+     "_links": {
+       "self": {
+         "href": "/v2/animals/64851955"
+       },
+       "type": {
+         "href": "/v2/types/dog"
+       },
+       "organization": {
+         "href": "/v2/organizations/ma576"
+       }
+     }
+   }, {
+     "id": 64851935,
+     "organization_id": "FL1618",
+     "url": "https://www.petfinder.com/cat/griffin-64851935/fl/orlando/liberation-cat-house-inc-fl1618/?referrer_id=17d61713-743c-48de-9625-a94ac4d7758e",
+     "type": "Cat",
+     "species": "Cat",
+     "breeds": {
+       "primary": "Domestic Short Hair",
+       "secondary": null,
+       "mixed": false,
+       "unknown": false
+     },
+     "colors": {
+       "primary": "Orange & White",
+       "secondary": null,
+       "tertiary": null
+     },
+     "age": "Senior",
+     "gender": "Male",
+     "size": "Medium",
+     "coat": null,
+     "attributes": {
+       "spayed_neutered": true,
+       "house_trained": true,
+       "declawed": false,
+       "special_needs": false,
+       "shots_current": false
+     },
+     "environment": {
+       "children": null,
+       "dogs": false,
+       "cats": true
+     },
+     "tags": [],
+     "name": "Griffin",
+     "description": "Griffin is an old soul. One might say he is like a warm fire, comfy blanket, or shirt. Given his...",
+     "organization_animal_id": "19350821",
+     "photos": [
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/1/?bust=1685914434&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/1/?bust=1685914434&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/1/?bust=1685914434&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/1/?bust=1685914434"
+       },
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/2/?bust=1685914369&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/2/?bust=1685914369&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/2/?bust=1685914369&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/2/?bust=1685914369"
+       },
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/3/?bust=1685914369&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/3/?bust=1685914369&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/3/?bust=1685914369&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/3/?bust=1685914369"
+       }
+     ],
+     "primary_photo_cropped": {
+       "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/1/?bust=1685914434&width=300",
+       "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/1/?bust=1685914434&width=450",
+       "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/1/?bust=1685914434&width=600",
+       "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64851935/1/?bust=1685914434"
+     },
+     "videos": [],
+     "status": "adoptable",
+     "status_changed_at": "2023-06-04T21:22:47+0000",
+     "published_at": "2023-06-04T21:22:45+0000",
+     "distance": null,
+     "contact": {
+       "email": "Liberationcathouse@gmail.com",
+       "phone": "(407) 415-9172",
+       "address": {
+         "address1": null,
+         "address2": null,
+         "city": "Seattle",
+         "state": "WA",
+         "postcode": "98258",
+         "country": "US"
+       }
+     },
+     "_links": {
+       "self": {
+         "href": "/v2/animals/64851935"
+       },
+       "type": {
+         "href": "/v2/types/cat"
+       },
+       "organization": {
+         "href": "/v2/organizations/fl1618"
+       }
+     }
+   }
+  ]
+}

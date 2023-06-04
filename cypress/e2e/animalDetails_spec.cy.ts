@@ -24,13 +24,13 @@ describe("Animal Detail Page", () => {
     cy.get("p").contains("Size: Small") 
     cy.get("p").contains("Spayed/Neutered: yes") 
     cy.get("p").contains("House Trained: yes") 
-    cy.get(".contact-info-header").contains("Contant Information")
+    cy.get(".contact-info-header").contains("Contact Information")
     cy.get("p").contains("Location: Valdosta, GA")
     cy.get("p").contains("Email: ig6Kennels@yahoo.com") 
     cy.get("p").contains("Phone Number: (229) 300-0203") 
   })
   it("User can return to the home page by clicking the logo in header", () => {
-    cy.get("img").click()
+    cy.get(".header-section").click()
     cy.url().should("eq", "http://localhost:3000/")
   })
 
