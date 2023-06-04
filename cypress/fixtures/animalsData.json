@@ -1,0 +1,356 @@
+{
+     "animals": [
+       {
+         "id": 64841660,
+         "organization_id": "GA1078",
+         "url": "https://www.petfinder.com/dog/sadie-64841660/ga/valdosta/ig6-boarding-and-rescue-llc-ga1078/?referrer_id=17d61713-743c-48de-9625-a94ac4d7758e",
+         "type": "Dog",
+         "species": "Dog",
+         "breeds": {
+           "primary": "Shih Tzu",
+           "secondary": null,
+           "mixed": false,
+           "unknown": false
+         },
+         "colors": {
+           "primary": "Apricot / Beige",
+           "secondary": null,
+           "tertiary": null
+         },
+         "age": "Senior",
+         "gender": "Female",
+         "size": "Small",
+         "coat": "Medium",
+         "attributes": {
+           "spayed_neutered": true,
+           "house_trained": true,
+           "declawed": null,
+           "special_needs": false,
+           "shots_current": true
+         },
+         "environment": {
+           "children": true,
+           "dogs": true,
+           "cats": true
+         },
+         "tags": ["Friendly", "Gentle", "Loyal"],
+         "name": "Sadie",
+         "description": "Sweet senior looking for her new person.  Her mom went into assisted living.",
+         "organization_animal_id": null,
+         "photos": [
+           {
+             "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877&width=100",
+             "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877&width=300",
+             "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877&width=600",
+             "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877"
+           },
+           {
+             "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/2/?bust=1685823878&width=100",
+             "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/2/?bust=1685823878&width=300",
+             "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/2/?bust=1685823878&width=600",
+             "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/2/?bust=1685823878"
+           }
+         ],
+         "primary_photo_cropped": {
+           "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877&width=300",
+           "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877&width=450",
+           "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877&width=600",
+           "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877"
+         },
+         "videos": [],
+         "status": "adoptable",
+         "status_changed_at": "2023-06-03T20:24:41+0000",
+         "published_at": "2023-06-03T20:24:39+0000",
+         "distance": null,
+         "contact": {
+           "email": "ig6Kennels@yahoo.com",
+           "phone": "(229) 300-0203",
+           "address": {
+             "address1": null,
+             "address2": null,
+             "city": "Valdosta",
+             "state": "GA",
+             "postcode": "31601",
+             "country": "US"
+           }
+         },
+         "_links": {
+           "self": {
+             "href": "/v2/animals/64841660"
+           },
+           "type": {
+             "href": "/v2/types/dog"
+           },
+           "organization": {
+             "href": "/v2/organizations/ga1078"
+           }
+         }
+       }, {
+     "id": 64841469,
+     "organization_id": "LA48",
+     "url": "https://www.petfinder.com/dog/gambit-64841469/la/slidell/slidell-animal-shelter-animal-assistance-league-of-slidell-la48/?referrer_id=17d61713-743c-48de-9625-a94ac4d7758e",
+     "type": "Dog",
+     "species": "Dog",
+     "breeds": {
+       "primary": "Shih Tzu",
+       "secondary": null,
+       "mixed": false,
+       "unknown": false
+     },
+     "colors": {
+       "primary": "Brown / Chocolate",
+       "secondary": "Gray / Blue / Silver",
+       "tertiary": "White / Cream"
+     },
+     "age": "Senior",
+     "gender": "Male",
+     "size": "Small",
+     "coat": "Long",
+     "attributes": {
+       "spayed_neutered": true,
+       "house_trained": true,
+       "declawed": null,
+       "special_needs": false,
+       "shots_current": true
+     },
+     "environment": {
+       "children": null,
+       "dogs": null,
+       "cats": null
+     },
+     "tags": [
+       "Friendly",
+       "Affectionate",
+       "Gentle",
+       "Quiet",
+       "Curious",
+       "Loves kisses"
+     ],
+     "name": "Gambit",
+     "description": "Case #52750247.  Gambit was born 5/26/10.  \n\nLittle Gambit was dropped off by his family because they could no longer care...",
+     "organization_animal_id": null,
+     "photos": [
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841469/1/?bust=1685822914&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841469/1/?bust=1685822914&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841469/1/?bust=1685822914&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841469/1/?bust=1685822914"
+       },
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841469/2/?bust=1685822915&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841469/2/?bust=1685822915&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841469/2/?bust=1685822915&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841469/2/?bust=1685822915"
+       }
+     ],
+     "primary_photo_cropped": {
+       "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841469/1/?bust=1685822914&width=300",
+       "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841469/1/?bust=1685822914&width=450",
+       "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841469/1/?bust=1685822914&width=600",
+       "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841469/1/?bust=1685822914"
+     },
+     "videos": [],
+     "status": "adoptable",
+     "status_changed_at": "2023-06-03T20:08:37+0000",
+     "published_at": "2023-06-03T20:08:36+0000",
+     "distance": null,
+     "contact": {
+       "email": "aalslidell@gmail.com",
+       "phone": "(985) 646-4267",
+       "address": {
+         "address1": "2700 Terrace Ave",
+         "address2": null,
+         "city": "Slidell",
+         "state": "LA",
+         "postcode": "70458",
+         "country": "US"
+       }
+     },
+     "_links": {
+       "self": {
+         "href": "/v2/animals/64841469"
+       },
+       "type": {
+         "href": "/v2/types/dog"
+       },
+       "organization": {
+         "href": "/v2/organizations/la48"
+       }
+     }
+   }, {
+     "id": 64841316,
+     "organization_id": "KS25",
+     "url": "https://www.petfinder.com/dog/dexter-64841316/ks/mission/the-pet-connection-inc-ks25/?referrer_id=17d61713-743c-48de-9625-a94ac4d7758e",
+     "type": "Dog",
+     "species": "Dog",
+     "breeds": {
+       "primary": "Beagle",
+       "secondary": "Terrier",
+       "mixed": true,
+       "unknown": false
+     },
+     "colors": {
+       "primary": "Black",
+       "secondary": "White / Cream",
+       "tertiary": null
+     },
+     "age": "Senior",
+     "gender": "Male",
+     "size": "Medium",
+     "coat": "Short",
+     "attributes": {
+       "spayed_neutered": true,
+       "house_trained": true,
+       "declawed": null,
+       "special_needs": false,
+       "shots_current": true
+     },
+     "environment": {
+       "children": true,
+       "dogs": true,
+       "cats": true
+     },
+     "tags": [
+       "Friendly",
+       "Affectionate",
+       "Loyal",
+       "Gentle",
+       "Smart",
+       "Curious",
+       "Funny",
+       "Couch potato"
+     ],
+     "name": "Dexter",
+     "description": "Hi! My name is Dexter and I am such a good boy! I am looking for someone to give me...",
+     "organization_animal_id": null,
+     "photos": [
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/3/?bust=1685821939&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/3/?bust=1685821939&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/3/?bust=1685821939&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/3/?bust=1685821939"
+       },
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/1/?bust=1685821937&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/1/?bust=1685821937&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/1/?bust=1685821937&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/1/?bust=1685821937"
+       },
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/2/?bust=1685821939&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/2/?bust=1685821939&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/2/?bust=1685821939&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/2/?bust=1685821939"
+       },
+       {
+         "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/4/?bust=1685821940&width=100",
+         "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/4/?bust=1685821940&width=300",
+         "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/4/?bust=1685821940&width=600",
+         "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/4/?bust=1685821940"
+       }
+     ],
+     "primary_photo_cropped": {
+       "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/3/?bust=1685821939&width=300",
+       "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/3/?bust=1685821939&width=450",
+       "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/3/?bust=1685821939&width=600",
+       "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841316/3/?bust=1685821939"
+     },
+     "videos": [],
+     "status": "adoptable",
+     "status_changed_at": "2023-06-03T19:52:22+0000",
+     "published_at": "2023-06-03T19:52:21+0000",
+     "distance": null,
+     "contact": {
+       "email": "kelso463@gmail.com",
+       "phone": "(913) 671-7387",
+       "address": {
+         "address1": "Address will vary",
+         "address2": null,
+         "city": "Mission",
+         "state": "KS",
+         "postcode": "66202",
+         "country": "US"
+       }
+     },
+     "_links": {
+       "self": {
+         "href": "/v2/animals/64841316"
+       },
+       "type": {
+         "href": "/v2/types/dog"
+       },
+       "organization": {
+         "href": "/v2/organizations/ks25"
+       }
+     }
+   }, {
+     "id": 64839743,
+     "organization_id": "TX2454",
+     "url": "https://www.petfinder.com/cat/puffy-64839743/tx/lubbock/operation-pawprints-tx2454/?referrer_id=17d61713-743c-48de-9625-a94ac4d7758e",
+     "type": "Cat",
+     "species": "Cat",
+     "breeds": {
+       "primary": "Domestic Short Hair",
+       "secondary": null,
+       "mixed": true,
+       "unknown": false
+     },
+     "colors": {
+       "primary": "Gray / Blue / Silver",
+       "secondary": "White",
+       "tertiary": null
+     },
+     "age": "Senior",
+     "gender": "Male",
+     "size": "Large",
+     "coat": "Short",
+     "attributes": {
+       "spayed_neutered": true,
+       "house_trained": true,
+       "declawed": false,
+       "special_needs": false,
+       "shots_current": true
+     },
+     "environment": {
+       "children": true,
+       "dogs": true,
+       "cats": true
+     },
+     "tags": ["Playful", "Smart", "Quiet", "Dignified"],
+     "name": "Puffy",
+     "description": null,
+     "organization_animal_id": null,
+     "photos": [],
+     "primary_photo_cropped": null,
+     "videos": [],
+     "status": "adoptable",
+     "status_changed_at": "2023-06-03T18:06:04+0000",
+     "published_at": "2023-06-03T18:06:03+0000",
+     "distance": null,
+     "contact": {
+       "email": "Operationpawprints@gmail.com",
+       "phone": "(806) 559-1874",
+       "address": {
+         "address1": null,
+         "address2": null,
+         "city": "Lubbock",
+         "state": "TX",
+         "postcode": "79416",
+         "country": "US"
+       }
+     },
+     "_links": {
+       "self": {
+         "href": "/v2/animals/64839743"
+       },
+       "type": {
+         "href": "/v2/types/cat"
+       },
+       "organization": {
+         "href": "/v2/organizations/tx2454"
+       }
+     }
+   }
+  ]
+
+}
