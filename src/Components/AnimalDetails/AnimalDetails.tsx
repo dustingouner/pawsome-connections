@@ -16,13 +16,12 @@ const AnimalDetails:React.FC<AnimalProps> = (props:AnimalProps) => {
   console.log(selectedAnimal)
 
   if (!selectedAnimal) {
-    return <p>Sorry, we cannot locate this pet!</p>
+    return <h1 className="error-message">Sorry, we cannot locate this pet!</h1>
   }
 
   const { primary_photo_cropped, age, status, breeds, contact, description, gender, name, size, type, attributes, photos} = selectedAnimal
   const imgSrc = primary_photo_cropped?.full
   const fallBackImage = require('../../assets/pawsome.png')
-  const morePhotos = photos
 
   return (
     <div className="animal-details-container">
@@ -30,9 +29,6 @@ const AnimalDetails:React.FC<AnimalProps> = (props:AnimalProps) => {
       <div className="animal-details">
         <div className="image-container">
           <img className="pet-photo" src={imgSrc || fallBackImage} alt={`${name}'s photo` || 'Pet photo not available, logo image shown'}/>
-          <div className="other-photos">
-            <p>more photos here</p>
-          </div>
         </div>
         <section className="animal-info">
           <h2 className="animal-info-header">Pet Details</h2>

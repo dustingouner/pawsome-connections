@@ -1,30 +1,6 @@
 import React from "react";
 
-const getAnimals = () => {
-  return fetch("https://api.petfinder.com/v2/animals?age=senior", {
-    method: "GET",
-    headers: {
-      Authorization:
-
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjBjZGE0NTkxZDllNTcxOTllYjFhN2Y5NTczMDhmYWFiZjQwMmM0YjM5NDgyNGFlNzI1NDFjMzJlODc4NTdiZmNhODM0YThjOWI3NDg0YWRkIiwiaWF0IjoxNjg1ODIyMjg0LCJuYmYiOjE2ODU4MjIyODQsImV4cCI6MTY4NTgyNTg4NCwic3ViIjoiIiwic2NvcGVzIjpbXX0.fEDbiLLjJbkRKJBbcHMllLlurlRcnKJNPuxWqYgq54dwNUJKOlQurvXFpy6SMSDmaC6CxA1mk3Ik75mZFlt4y8Rrj6RZhP-IdcPSf-nWWD68j0ItRakDXVBbjZoEn0uz504QSgJiuCUi_jYVzM6DH0yAPJMBo46GgaCAwavNBfdgG9cygZi0GsWL-nNhIKO_3x24l-WaDCbpqAlDSAhir23vzvGomcIKDdWjg5VsDgo9lZkJuuzLCIHQi-6JKta7E3rV1-zh72FB-vxQDplvSRewUKEtQXnxFhGLbv_HWXJy9pYoJ2JJJfiElD9VH-5rR7GHeoj8PtYWPIJuv49hfw",
-
-    },
-  })
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error ("Failed to Fetch") 
-
-  } else {
-    return response.json()
-  }})
-
-  .catch((error) => {
-    console.error("Error fetching animals:", error);
-    throw error;
-  });
-}
-
-const getAnimalSelected = (location: string, type: string) => {
+const getAnimals = (location: string, type: string) => {
   let url = "https://api.petfinder.com/v2/animals?age=senior";
 
   if (location) {
@@ -39,22 +15,16 @@ const getAnimalSelected = (location: string, type: string) => {
     method: "GET",
     headers: {
       Authorization:
-
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjBjZGE0NTkxZDllNTcxOTllYjFhN2Y5NTczMDhmYWFiZjQwMmM0YjM5NDgyNGFlNzI1NDFjMzJlODc4NTdiZmNhODM0YThjOWI3NDg0YWRkIiwiaWF0IjoxNjg1ODIyMjg0LCJuYmYiOjE2ODU4MjIyODQsImV4cCI6MTY4NTgyNTg4NCwic3ViIjoiIiwic2NvcGVzIjpbXX0.fEDbiLLjJbkRKJBbcHMllLlurlRcnKJNPuxWqYgq54dwNUJKOlQurvXFpy6SMSDmaC6CxA1mk3Ik75mZFlt4y8Rrj6RZhP-IdcPSf-nWWD68j0ItRakDXVBbjZoEn0uz504QSgJiuCUi_jYVzM6DH0yAPJMBo46GgaCAwavNBfdgG9cygZi0GsWL-nNhIKO_3x24l-WaDCbpqAlDSAhir23vzvGomcIKDdWjg5VsDgo9lZkJuuzLCIHQi-6JKta7E3rV1-zh72FB-vxQDplvSRewUKEtQXnxFhGLbv_HWXJy9pYoJ2JJJfiElD9VH-5rR7GHeoj8PtYWPIJuv49hfw"
+        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6ImRiOGRkNGQ4ZDkwOTA5NDMxNzg5N2MxYmQ3YmRjMzI4NzJiOTEyNTBhMDY4ZmYxNWM2ZWMwYWVhN2YzNDk1ZWY5YzJlNDFkZGRjNTEyM2VjIiwiaWF0IjoxNjg1ODA2OTU0LCJuYmYiOjE2ODU4MDY5NTQsImV4cCI6MTY4NTgxMDU1NCwic3ViIjoiIiwic2NvcGVzIjpbXX0.lmvEwSTeFZAFqRDYa5wD3MnjjdEqZVXipzn7AE1cB3hMh9eeVybIlw8Leo_vd9U_oQ9RCbHKka6rsCuHZhP7d1I2d-xMrY_0_MEkF5YRcOTh8GhihYL8aXuqOLOQh6C-HqWJqnifWwLfS17Y38jfO3EumJOSN1TYpzLMxGba6hSTeAww-MbtXIFVmZ7Xon_VBHOZvQ_9zyJSbGgvk2L35iiIyr46QDOQsS5o3WNI4uK2VMmRmtedolzO598SdVB8Yg7H-EalPHGStM6SNJ7MKrgBu2raopHhGqF4W9a5Ty9tL3o5jsV6vbclSrAHU5upIxehNYdvPRFjd7EAIIlVwQ",
     },
   })
     .then((response) => {
       if (!response.ok) {
         throw new Error ("Failed to Fetch") 
-
-    } else {
-      return response.json()
-    }})
-  
-    .catch((error) => {
-      console.error("Error fetching animals:", error);
-      throw error;
-    });
+      } else {
+        return response.json()
+      }
+    })
 };
 
-export { getAnimals, getAnimalSelected };
+export { getAnimals };
