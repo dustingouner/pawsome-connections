@@ -1,0 +1,96 @@
+   
+  { 
+      "animals": [ 
+        {
+          "id": 64841660,
+          "organization_id": "GA1078",
+          "url": "https://www.petfinder.com/dog/sadie-64841660/ga/valdosta/ig6-boarding-and-rescue-llc-ga1078/?referrer_id=17d61713-743c-48de-9625-a94ac4d7758e",
+          "type": "Dog",
+          "species": "Dog",
+          "breeds": {
+              "primary": "Shih Tzu",
+              "secondary": null,
+              "mixed": false,
+              "unknown": false
+          },
+          "colors": {
+              "primary": "Apricot / Beige",
+              "secondary": null,
+              "tertiary": null
+          },
+          "age": "Senior",
+          "gender": "Female",
+          "size": "Small",
+          "coat": "Medium",
+          "attributes": {
+              "spayed_neutered": true,
+              "house_trained": true,
+              "declawed": null,
+              "special_needs": false,
+              "shots_current": true
+          },
+          "environment": {
+              "children": true,
+              "dogs": true,
+              "cats": true
+          },
+          "tags": [
+              "Friendly",
+              "Gentle",
+              "Loyal"
+          ],
+          "name": "Sadie",
+          "description": "Sweet senior looking for her new person.  Her mom went into assisted living.",
+          "organization_animal_id": null,
+          "photos": [
+              {
+                  "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877&width=100",
+                  "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877&width=300",
+                  "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877&width=600",
+                  "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877"
+              },
+              {
+                  "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/2/?bust=1685823878&width=100",
+                  "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/2/?bust=1685823878&width=300",
+                  "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/2/?bust=1685823878&width=600",
+                  "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/2/?bust=1685823878"
+              }
+          ],
+          "primary_photo_cropped": {
+              "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877&width=300",
+              "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877&width=450",
+              "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877&width=600",
+              "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64841660/1/?bust=1685823877"
+          },
+          "videos": [],
+          "status": "adoptable",
+          "status_changed_at": "2023-06-03T20:24:41+0000",
+          "published_at": "2023-06-03T20:24:39+0000",
+          "distance": null,
+          "contact": {
+              "email": "ig6Kennels@yahoo.com",
+              "phone": "(229) 300-0203",
+              "address": {
+                  "address1": null,
+                  "address2": null,
+                  "city": "Valdosta",
+                  "state": "GA",
+                  "postcode": "31601",
+                  "country": "US"
+              }
+          },
+          "_links": {
+              "self": {
+                  "href": "/v2/animals/64841660"
+              },
+              "type": {
+                  "href": "/v2/types/dog"
+              },
+              "organization": {
+                  "href": "/v2/organizations/ga1078"
+              }
+      }
+      
+    }]
+    
+  }
