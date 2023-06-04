@@ -67,8 +67,6 @@ import ShowError from '../Error/Error';
         
     } else {
     
-    
-
   return (
   
     <div className="App">
