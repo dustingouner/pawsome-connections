@@ -55,6 +55,7 @@ import ShowError from '../Error/Error';
         <div>
           <Header />
           <h1 className="error-message">{error.message}</h1>
+          <iframe src="https://giphy.com/embed/2Faz1ANKPPUY4XhT2" width="480" height="480" frameBorder="0" className="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/huffingtonpost-dog-mean-girls-fetch-2Faz1ANKPPUY4XhT2">via GIPHY</a></p>
         </div>
       ) 
     } else {
