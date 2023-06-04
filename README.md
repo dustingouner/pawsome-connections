@@ -27,6 +27,9 @@ During this project, we challenged ourselves to self-teach and implement a new t
 
 ## Preview
 
+![Screen Recording 2023-06-04 at 2 32 20 PM](https://github.com/dustingouner/pawsome-connections/assets/117230717/c29bb364-7eda-465e-9b89-d0d1784bf29d)
+
+
 ## Contributors
 
 - Samantha McElhinney [GitHub](https://github.com/samanthamcelhinney) | [LinkedIn](https://www.linkedin.com/in/samantha-mcelhinney/) <br>
@@ -58,3 +61,4 @@ This project was assigned in the third week of Module 3 at [Turing School of Sof
 - Enhance the user experience by incorporating video previews and additional animal photos when clicking on the details page. 
 - Add animal zodiac signs and incorporate a swiping feature for matching animal's to owners. 
 - Build our own API using Express.js to have more control over the data and customize it to meet specific needs.
+- Improve overall styling
