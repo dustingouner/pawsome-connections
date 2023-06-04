@@ -10,8 +10,10 @@ interface AnimalProps {
 const AnimalDetails:React.FC<AnimalProps> = (props:AnimalProps) => {
   const { animals } = props;
   const { id } = useParams<{id: string }>();
+  
 
   const selectedAnimal = animals.find(animal => animal.id === Number(id));
+  console.log(selectedAnimal)
 
   if (!selectedAnimal) {
     return <h1 className="error-message">Sorry, we cannot locate this pet!</h1>
@@ -40,11 +42,10 @@ const AnimalDetails:React.FC<AnimalProps> = (props:AnimalProps) => {
             <p className="stats">Size: {size}</p>
             <p className="stats">Spayed/Neutered: {attributes.spayed_neutered && 'yes' || 'no'}</p>
             <p className="stats">House Trained: {attributes.house_trained && 'yes' || 'no'}</p>
-            <p className="stats">Spayed/Neutered: {attributes.spayed_neutered && 'yes' || 'no'}</p>
           </section>
         </section>
         <section className="contact-info">
-          <h2 className="contact-info-header">Contant Information</h2>
+          <h2 className="contact-info-header">Contact Information</h2>
           <section className="contact-details">
           <p>Location: {contact.address.city}, {contact.address.state}</p>
           <p>Email: {contact.email}</p>
