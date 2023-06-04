@@ -78,4 +78,13 @@ describe("Search Form", () => {
       "Zip code should be 5 characters long."
     );
   });
+  it("should search for pets by type", () => {
+    const selectedType = "dog"; 
+    cy.get("#animalTypeSelected") 
+      .select(selectedType); 
+    cy.get("form") 
+      .submit(); 
+    cy.get(".animals-container")
+      .should("be.visible")
+  });
 });
