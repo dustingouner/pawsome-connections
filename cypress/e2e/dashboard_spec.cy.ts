@@ -48,13 +48,6 @@ describe("Search Form", () => {
     cy.intercept("GET", "https://api.petfinder.com/v2/animals?age=senior", {
       fixture: "animalsData.json",
     });
-    cy.intercept(
-      "GET",
-      "https://api.petfinder.com/v2/animals?age=senior&location=31601",
-      {
-        fixture: "animalsData.json",
-      }
-    );
     cy.visit("http://localhost:3000/");
   });
 
@@ -80,22 +73,43 @@ describe("Search Form", () => {
       "Zip code should be 5 characters long."
     );
   });
-
-  it("should search for pets by type", () => {
-     cy.intercept(
-       "GET",
-       "https://api.petfinder.com/v2/animals?age=senior&type=dog",
-       {
-         fixture: "animalsData.json",
-       }
-     ).as("searchByType")
-     .visit("http://localhost:3000");
-    const selectedType = "dog";
-    cy.get("#animalTypeSelected").select(selectedType);
-    cy.get("form").submit();
- cy.wait("@searchByType").then(() => {
-   cy.get(".animals-container").should("be.visible");
-   cy.get(".animal-card").should("have.length", 3);
- });
+  it("should have the option to select 'dog' from the dropdown", () => {
+    cy.get("#animalTypeSelected").select("dog");
+    cy.get("#animalTypeSelected").should("have.value", "dog");
   });
-});
+  it("should have the option to select 'cat' from the dropdown", () => {
+    cy.get("#animalTypeSelected").select("cat");
+    cy.get("#animalTypeSelected").should("have.value", "cat");
+  });
+  it("should search for pets by type", () => {
+    cy.intercept(
+      "GET",
+      "https://api.petfinder.com/v2/animals?age=senior&type=dog",
+      {
+        fixture: "animalType.json",
+      }
+      )
+      .as("searchByType")
+      .visit("http://localhost:3000");
+      const selectedType = "Dog";
+      cy.get("#animalTypeSelected").select(selectedType);
+      cy.get("form").submit();
+      cy.get(".animals-container").should("be.visible");
+      cy.get(".animal-card").should("have.length", 3);
+    })
+    it("should search for pets by zipcode", () => {
+      cy.intercept(
+        "GET",
+        "https://api.petfinder.com/v2/animals?age=senior&location=98258",
+        {
+          fixture: "animalzipcode.json",
+        }
+      )
+        .visit("http://localhost:3000");
+       cy.get("form").get('input[name="location"]').type("98258");
+      cy.get("form").submit();
+      cy.get(".animals-container").should("be.visible");
+      cy.get(".animal-card").should("have.length", 3);
+    });
+ });
+
