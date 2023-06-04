@@ -31,8 +31,8 @@ During this project, we challenged ourselves to self-teach and implement a new t
 
 - Samantha McElhinney [GitHub](https://github.com/samanthamcelhinney) | [LinkedIn](https://www.linkedin.com/in/samantha-mcelhinney/) <br>
 - Dustin Gouner  [GitHub](https://github.com/dustingouner) | [LinkedIn](https://www.linkedin.com/in/dustin-gouner/) <br>
-- Sarah Moore [GitHub](https://github.com/sarahcatherine311) <br>
-- Matt Saqueli [GitHub] (https://github.com/mattsaqueli)
+- Sarah Moore [GitHub](https://github.com/sarahcatherine311) | [LinkedIn](https://www.linkedin.com/in/sarah-moore-a35196127/) <br>
+- Matt Saqueli [GitHub](https://github.com/mattsaqueli) | [LinkedIn](https://www.linkedin.com/in/mattsaqueli/)
 
 ---
 
