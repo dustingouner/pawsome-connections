@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Pawsome Connections 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
 
-## Available Scripts
+Welcome to 🐾Pawsome Connections, a web application created by a team of four passionate developers who share a love for animals. We developed this application in hopes to help older animals and animals who have been waiting to be adopted over 30 days get adopted.
 
-In the project directory, you can run:
+With 🐾Pawsome Connections, users can browse a list of animals eagerly awaiting their perfect match. Seamlessly search for your ideal companion by animal type and location, tailoring your quest to find that special fur-ever friend.  User's are also able to favorite their dream pets and view all their selected favorites on a seperate page, ensuring they're just a whisker away whenever they're ready to make their final choice. Does an adorable cat catch your eye? You can click on the card to view a more detailed view on information about their potential match and how they can take the next steps to adopt.
 
-### `npm start`
+During this project, we challenged ourselves to self-teach and implement a new technology TypeScript for improved code organization and enhanced type safety. Our team utilized their newly acquired skills in TypeScript, React, and Router to create a seamless and capitivatin user experience to help solve a problem with dogs needing a home. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Set Up 
 
-### `npm test`
+### Installing the files
+ - Fork this [repository](https://github.com/dustingouner/pawsome-connections) to your GitHub account. 
+ - In your forked respository, click the `code` drop-down menu and copy the SSH key.
+ - On your local machine, open the terminal and navigate to the location you'd like the repository directory cloned to. 
+ - Once you're there, run `git clone [SSH Key] [pawsome-connections]` via the command line.
+ - Run `npm install`. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Opening the application
+ - When you're ready to use the app, open the terminal and navigate to the pawesome-connections directory via the terminal.
+ - In the terminal, use command+t to open a new terminal tab. 
+ - In the new terminal tab, run `npm start`.
+ - Once WebPack has compiled the necessary resources, you will see a link within the text of your terminal. You can copy and paste that link into your browser to access a locally-hosted version of this application on your machine. 
 
-### `npm run build`
+## Preview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contributors
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Samantha McElhinney [GitHub](https://github.com/samanthamcelhinney) | [LinkedIn](https://www.linkedin.com/in/samantha-mcelhinney/) <br>
+- Dustin Gouner  [GitHub](https://github.com/dustingouner) | [LinkedIn](https://www.linkedin.com/in/dustin-gouner/) <br>
+- Sarah Moore [GitHub](https://github.com/sarahcatherine311) <br>
+- Matt Saqueli [GitHub] (https://github.com/mattsaqueli)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Context
+This project was assigned in the third week of Module 3 at [Turing School of Software and Design Front End Web Development program](https://frontend.turing.edu/), a four- module, seven-month course focused on preparing students for a career as web developers working with Javascript, HTML, CSS, and the React framework. The application was built over the course of two weeks.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies/ Metholodologies
+- TypeScript
+- React & React Router
+- End to end testing using Cypress
+- Fetch API
+- Git/GitHub/ GitHub project board
+- Javascript/ CSS/ HTML
+- Error handling for network and user errors
+- Utilizing Agile/ Scrum project management
+- Responsive design
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Development Opportunities
+- User login feature, enabling saving favorites between visits.
+- Expand the search functionality to include a wider range of animal types and more specific location criteria.
+- Enhance the user experience by incorporating video previews and additional animal photos when clicking on the details page. 
+- Add animal zodiac signs and incorporate a swiping feature for matching animal's to owners. 
+- Build our own API using Express.js to have more control over the data and customize it to meet specific needs.

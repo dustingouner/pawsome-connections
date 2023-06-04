@@ -38,17 +38,17 @@
   display: flex;
   flex-direction: column;
   border: 2px solid black;
-  height: 70%;
-  width: 20em;
+  height:100%;
+  width:100%;
 }
-
+/* 
 .other-photos {
   display: flex;
   border: 2px solid black;
   height: 30%;
   width: 100%;
 
-}
+} */
 
 .animal-details {
   display: flex;
@@ -107,4 +107,26 @@
 .contact-details {
   margin: 1em
 }
+
+@media screen and (max-width: 768px) {
+  .animal-details {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  
+  .animal-info,
+  .contact-info
+  .pet-photo {
+    width: 90%;
+  }
+  
+  .pet-photo {
+    width: 100%;
+  }
+}
+
+
+
+
 

@@ -10,9 +10,21 @@ interface AnimalProps {
 
 const AnimalCard:React.FC<AnimalProps> = (props:AnimalProps) => {
   let { animalDetails, favoriteAnimals, unfavoriteAnimals } = props
-  const fallBackImage = require('../../assets/sorry-image.png')  
+  const fallBackImages = [
+    require("../../assets/sorry-image.png"),
+    require("../../assets/SorryCat1.png"),
+    require("../../assets/Sorry3.png"),
+    require("../../assets/SorryCat3.png"),
+    require("../../assets/Sorry4.png"),
+    require("../../assets/SorryCat.png"),
+  ]; 
   const imgSrc = animalDetails.primary_photo_cropped?.small
-  
+
+  const getRandomFallbackImage = () => {
+    const randomIndex = Math.floor(Math.random() * fallBackImages.length);
+    return fallBackImages[randomIndex];
+  };
+
   const toggleFavorite = (animal: Animal, event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault()
     if(animalDetails.favorited) {
@@ -26,7 +38,7 @@ const AnimalCard:React.FC<AnimalProps> = (props:AnimalProps) => {
 
   return (
     <section className="animal-card">
-        <img className="animal-img" src={imgSrc || fallBackImage} alt="Photos are in the works!" />
+        <img className="animal-img" src={imgSrc || getRandomFallbackImage()} alt="Photos are in the works!" />
         <button className="favorite-button" onClick={event => toggleFavorite(animalDetails, event)} >
         {animalDetails.favorited ? "❤️" : "🤍"}
       </button>

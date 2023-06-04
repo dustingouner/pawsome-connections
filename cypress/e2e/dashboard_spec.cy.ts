@@ -1,12 +1,12 @@
 ///<reference types="Cypress" />
 
 describe("Dashboard", () => {
-  beforeEach("Visit homepage", () => {
+  beforeEach(() => {
     cy.intercept("GET", "https://api.petfinder.com/v2/animals?age=senior", {
       fixture: "animalsData.json",
     }).visit("http://localhost:3000/");
   });
-  it("has a header with an image of the logo and title of website", () => {
+  it("should have a header with an image of the logo and title of website", () => {
     cy.get("header").should("is.visible").find("img").should("be.visible");
   });
   it("should display a button to take the user back home ", () => {
@@ -41,10 +41,10 @@ it("should see a error in the case of a bad GET response", () => {
   cy.intercept("https://api.petfinder.com/v2/animals?age=senior", {
     statusCode: 404,
   }).visit("http://localhost:3000");
-  cy.get(".header-section").get("p").should("have.text", "Failed to Fetch");
+  cy.get(".header-section").get("h1").should("have.text", "Failed to Fetch");
 });
 describe("Search Form", () => {
-  beforeEach("search input", () => {
+  beforeEach(() => {
     cy.intercept("GET", "https://api.petfinder.com/v2/animals?age=senior", {
       fixture: "animalsData.json",
     });
@@ -57,6 +57,7 @@ describe("Search Form", () => {
     );
     cy.visit("http://localhost:3000/");
   });
+
   it("should be able to input data in a form to search by zipcode", () => {
     cy.get("form")
       .get('input[name="location"]')
@@ -67,7 +68,8 @@ describe("Search Form", () => {
       .first()
       .should("have.text", "🤍SadieSenior | Shih Tzu | Valdosta, GA");
   });
-  it("should give an error message if there are no matching zipcodes", () => {
+
+  it("should give an error message if there are no matching zip codes", () => {
     cy.get("form")
       .get('input[name="location"]')
       .type("34")
@@ -78,13 +80,22 @@ describe("Search Form", () => {
       "Zip code should be 5 characters long."
     );
   });
+
   it("should search for pets by type", () => {
-    const selectedType = "dog"; 
-    cy.get("#animalTypeSelected") 
-      .select(selectedType); 
-    cy.get("form") 
-      .submit(); 
-    cy.get(".animals-container")
-      .should("be.visible")
+     cy.intercept(
+       "GET",
+       "https://api.petfinder.com/v2/animals?age=senior&type=dog",
+       {
+         fixture: "animalsData.json",
+       }
+     ).as("searchByType")
+     .visit("http://localhost:3000");
+    const selectedType = "dog";
+    cy.get("#animalTypeSelected").select(selectedType);
+    cy.get("form").submit();
+ cy.wait("@searchByType").then(() => {
+   cy.get(".animals-container").should("be.visible");
+   cy.get(".animal-card").should("have.length", 3);
+ });
   });
 });

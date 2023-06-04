@@ -15,16 +15,15 @@ const getAnimals = (location: string, type: string) => {
     method: "GET",
     headers: {
       Authorization:
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6ImRhMTgyNDA3YjVhNzc2MjZiZjY4ZjA4MDM2NTRhMzQ5Y2UxOWUzOTIwYmVhZDYyMDRmOWI2Njg4YTRlZWZhNGUwN2ExNjQwOWVmYmU2NGQ1IiwiaWF0IjoxNjg1ODQ4MjIxLCJuYmYiOjE2ODU4NDgyMjEsImV4cCI6MTY4NTg1MTgyMSwic3ViIjoiIiwic2NvcGVzIjpbXX0.NYKpIK_e0vvJCYL1FBOPfB7_ERgfihcHXd7c0NLx7bzJyH3gRK6ZJoRkqIJk40Mj2zrXF2e21QC9-n2IxFn2-NnFqHAHvvRmOY2Plyh2A6kIQ6r6OJLkRnaq6csLUZYz8IN4dfxJ5RVqqc4yNxs3kqH7nzsG8of-HS5GyfdLvOKCW21sNT_TphvxlXxISOXx7f1-d6UN6czm1lyvY-pJEcCcBwCYgpkWaQq7HkbmkBJHbkR1Cz_Wqslr5sMuoqMMZmKiCGmuXO4D9dI7mjcW50d3PH8h0p6suyif66u6EjyTLjUfIQy15wyhODYd0IPoMpF8s7JJBCL_su7DaNVz_Q",
+        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJvMzRDd0g2anF3QWdMQ2JZY2VjNHQwWlJSeFdTckwwR3lFQm5OM3dSVUxVdGFNMWI0QiIsImp0aSI6IjVjY2FhNzY1MmJmMjEwY2Y0ZjViODk4ODRhMzU5MjUxMWNiNGVjYmNiYWQ4YWQ5YmQyNzZhOWFlMzUwMzAxODk1MjczNWJhZjhjNTg3ZDMwIiwiaWF0IjoxNjg1ODYxNzI0LCJuYmYiOjE2ODU4NjE3MjQsImV4cCI6MTY4NTg2NTMyNCwic3ViIjoiIiwic2NvcGVzIjpbXX0.L5yCJXx9A0vVy7Vl6wQ1plpLEBr9UdFiXu5EfgiQZcpnII10CCXqP3QwgtxunNNctut30ZdATdtAVYrHBZZq1NMlAxq6wX5EMW4CScqxrJ5jmR2y8EsdjV5gBCcyjdQyzhtE_zY63399a9K33AmcoBLkUX0OoK6eSOcSYZsPIWdRfNtgV82rC-YsZVz7YMei5BT7m_AfvqLK-aMFNSSbFsOCrmvejFPcEfnouWxjFX3tUrNd6fdsnJvFZ1QMVXe0Bt039hzzG4g_TF0NfEzo2iLWO6G5KVRlYglRTUVlyGjE8tO3K7sAR_PBzNHyJ4kbIkhp8pumwn1Rn6xXDV0P6Q",
     },
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error ("Failed to Fetch") 
-      } else {
-        return response.json()
-      }
-    })
+  }).then((response) => {
+    if (!response.ok) {
+      throw new Error("Failed to Fetch");
+    } else {
+      return response.json();
+    }
+  });
 };
 
 export { getAnimals };
