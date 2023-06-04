@@ -34,7 +34,6 @@ const Form:React.FC<FormProps> = (props:FormProps) => {
         <label htmlFor="location">Find Pets by Zip Code:  </label>
         <input id="locationInput" name="location" type="number" placeholder="Input Zip Code" onChange={event => setZipCode(event.target.value)}></input>
       </div>
-
         {zipCodeError && <p className='zipcode-error'>{zipCodeError}</p>}
       <input name="submitForm"type="submit"/>
     </form>
