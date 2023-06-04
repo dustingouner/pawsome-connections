@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './AnimalCard.css'
 import { Animal } from "../../types";
 
@@ -18,7 +18,12 @@ const AnimalCard:React.FC<AnimalProps> = (props:AnimalProps) => {
     require("../../assets/Sorry4.png"),
     require("../../assets/SorryCat.png"),
   ]; 
-  const imgSrc = animalDetails.primary_photo_cropped?.small
+  const imgSrc = animalDetails.primary_photo_cropped?.small;
+  const [randomFallbackImage, setRandomFallbackImage] = useState<string>("");
+
+  useEffect(() => {
+    setRandomFallbackImage(getRandomFallbackImage());
+  }, []);
 
   const getRandomFallbackImage = () => {
     const randomIndex = Math.floor(Math.random() * fallBackImages.length);
@@ -38,7 +43,7 @@ const AnimalCard:React.FC<AnimalProps> = (props:AnimalProps) => {
 
   return (
     <section className="animal-card">
-        <img className="animal-img" src={imgSrc || getRandomFallbackImage()} alt="Photos are in the works!" />
+        <img className="animal-img" src={imgSrc || randomFallbackImage} alt="Photos are in the works!" />
         <button className="favorite-button" onClick={event => toggleFavorite(animalDetails, event)} >
         {animalDetails.favorited ? "❤️" : "🤍"}
       </button>

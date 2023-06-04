@@ -2,6 +2,7 @@ import React from "react";
 import { Animal } from '../../types';
 import { useParams } from "react-router-dom"
 import './AnimalDetails.css'
+import { url } from "inspector";
 
 interface AnimalProps {
   animals: Animal[]
@@ -13,15 +14,18 @@ const AnimalDetails:React.FC<AnimalProps> = (props:AnimalProps) => {
   
 
   const selectedAnimal = animals.find(animal => animal.id === Number(id));
-  console.log(selectedAnimal)
 
   if (!selectedAnimal) {
     return <h1 className="error-message">Sorry, we cannot locate this pet!</h1>
   }
 
-  const { primary_photo_cropped, age, status, breeds, contact, description, gender, name, size, type, attributes, photos} = selectedAnimal
+  const { primary_photo_cropped, age, status, breeds, contact, description, gender, name, size, type, attributes, url} = selectedAnimal
   const imgSrc = primary_photo_cropped?.full
-  const fallBackImage = require('../../assets/pawsome.png')
+  const fallBackImage = require('../../assets/sorry-image.png')
+  let fixedDetails;
+  if (description  && description.includes('&amp;#39;')) {
+    fixedDetails = description.split('&amp;#39;').join("'")
+  }
 
   return (
     <div className="animal-details-container">
@@ -32,7 +36,9 @@ const AnimalDetails:React.FC<AnimalProps> = (props:AnimalProps) => {
         </div>
         <section className="animal-info">
           <h2 className="animal-info-header">Pet Details</h2>
-          <p className="description">{description}</p>
+          <p className="description">{fixedDetails || description}  <a href={url} aria-label="Link to pet's information">
+          See more details
+        </a></p>
           <section className="animal-stats">
             <p className="stats">Adoption Status: {status} </p>
             <p className="stats">Species: {type}</p>
