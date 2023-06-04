@@ -36,7 +36,7 @@ const Form:React.FC<FormProps> = (props:FormProps) => {
       </div>
 
         {zipCodeError && <p className='zipcode-error'>{zipCodeError}</p>}
-      <input type="submit"/>
+      <input name="submitForm"type="submit"/>
     </form>
   )
 
