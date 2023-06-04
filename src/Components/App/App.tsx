@@ -66,10 +66,7 @@ import ShowError from '../Error/Error';
       )
         
     } else {
-    
-    
 
-      console.log(animals)
   return (
     <div className="App">
       <Header />
